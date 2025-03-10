@@ -15,9 +15,10 @@ a:hover{
 
 }
 main{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
     text-align: left;
-    margin-left: 20%;
-    margin-right: 20%;
 
 }
 h2{
@@ -29,4 +30,35 @@ img{
 figure{
     text-align: center;
     font-style: italic;
+}
+/* Responsive Design Media Queries */
+
+/* Large Screens (Desktops & Laptops) */
+@media screen and (min-width: 981px) and (max-width: 1400px) {
+    #colorbox {
+        background-color: yellow;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 601px) and (max-width: 980px) {
+    #colorbox {
+        background-color: orange;
+    }
+    main {
+        width: 95%;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (min-width: 370px) and (max-width: 600px) {
+    #colorbox {
+        background-color: red;
+    }
+    main {
+        width: 100%;
+    }
+    img {
+        width: 80%;
+    }
 }
