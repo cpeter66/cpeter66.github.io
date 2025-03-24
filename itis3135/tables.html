@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christian Peters's Creative Panther || ITIS3135 || HTML Tables</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <script src="https://farawayforests.com/cdn/accumulus/accumulus.min.js"></script>
+</head>
+<style>
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tr:first-child {
+    background-color: blue;
+    color: white;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+</style>
+<body>
+    <main>
+        <h2>HTML Tables</h2>
+    </main>
+    <h3>My Tabular Data</h3>
+<ol>
+    <li>John Smith - jsmith@techdragon.com - 5 years</li>
+    <li>Sarah Johnson - sjohnson@techdragon.com - 3 years</li>
+    <li>Michael Brown - mbrown@techdragon.com - 7 years</li>
+    <li>Emily Davis - edavis@techdragon.com - 2 years</li>
+    <li>David Wilson - dwilson@techdragon.com - 10 years</li>
+    <li>Jessica Lee - jlee@techdragon.com - 1 year</li>
+    <li>Robert Taylor - rtaylor@techdragon.com - 4 years</li>
+</ol>
+
+<h3>Employee Data in Simple Table</h3>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Years of Service</th>
+    </tr>
+    <tr>
+        <td>John Smith</td>
+        <td>jsmith@techdragon.com</td>
+        <td>5</td>
+    </tr>
+</table>
+
+
+<h3>Employee Data in Complex Table</h3>
+<figure>
+    <figcaption>Employee Information</figcaption>
+    <table>
+        <tr>
+            <th>Department</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Years of Service</th>
+            <th>Monthly Salary</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Management</td>
+            <td>John Smith</td>
+            <td>jsmith@techdragon.com</td>
+            <td>5</td>
+            <td>$8,000</td>
+        </tr>
+        <tr>
+            <td>Sarah Johnson</td>
+            <td>sjohnson@techdragon.com</td>
+            <td>3</td>
+            <td>$7,500</td>
+        </tr>
+        <tr>
+            <td><strong>Total Years of Service</strong></td>
+            <td>32</td>
+            <td>$58,000</td>
+        </tr>
+    </table>
+</figure>
+
+
+
+
+
+</body>
