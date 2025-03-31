@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="byoscript.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BYO Intro | Creative Panther | ITIS 3135</title>
@@ -57,6 +56,32 @@
         #result-container {
             display: none;
         }
+        
+        button.delete-course {
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        
+        button.delete-course:hover {
+            background-color: #cc0000;
+        }
+        
+        #add-course {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+        
+        #add-course:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -73,12 +98,12 @@
             <form id="intro-form">
                 <div>
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required value="Your Name">
+                    <input type="text" id="name" name="name" required value="Christian Peters">
                 </div>
                 
                 <div>
                     <label for="mascot">Mascot:</label>
-                    <input type="text" id="mascot" name="mascot" required value="Your Mascot">
+                    <input type="text" id="mascot" name="mascot" required value="Creative Panther">
                 </div>
                 
                 <div>
@@ -89,39 +114,47 @@
                 
                 <div>
                     <label for="image-caption">Image Caption:</label>
-                    <input type="text" id="image-caption" name="image-caption" required value="Your mascot description">
+                    <input type="text" id="image-caption" name="image-caption" required value="Christian's mascot">
                 </div>
                 
                 <div>
                     <label for="personal-bg">Personal Background:</label>
-                    <textarea id="personal-bg" name="personal-bg" required>Tell us about yourself...</textarea>
+                    <textarea id="personal-bg" name="personal-bg" required>Hello, I've been born and raised in Charlotte! I am a current Computer Science major with a concentration in cybersecurity. This field has interested me since high school when I was dual enrolled in classes. I also have a passion for technology and traveling.</textarea>
                 </div>
                 
                 <div>
                     <label for="professional-bg">Professional Background:</label>
-                    <textarea id="professional-bg" name="professional-bg" required>Your work experience...</textarea>
+                    <textarea id="professional-bg" name="professional-bg" required>I currently work at the University of North Carolina at Charlotte as a peer professional at the Career Center.</textarea>
                 </div>
                 
                 <div>
                     <label for="academic-bg">Academic Background:</label>
-                    <textarea id="academic-bg" name="academic-bg" required>Your education...</textarea>
+                    <textarea id="academic-bg" name="academic-bg" required>Majoring in Computer Science with a concentration in Cybersecurity as well as a Mathematics minor.</textarea>
                 </div>
                 
                 <div>
                     <label for="web-bg">Background in Web Development:</label>
-                    <textarea id="web-bg" name="web-bg" required>Your web development experience...</textarea>
+                    <textarea id="web-bg" name="web-bg" required>I have taken plenty of computer science core courses but not involving HTML and CSS.</textarea>
                 </div>
                 
                 <div>
                     <label for="platform">Primary Computer Platform:</label>
-                    <input type="text" id="platform" name="platform" required value="Your OS">
+                    <input type="text" id="platform" name="platform" required value="Windows">
                 </div>
                 
                 <div id="courses-container">
                     <label>Courses currently taking:</label>
                     <div id="course-inputs">
                         <div class="course-entry">
-                            <input type="text" class="course" name="course1" required value="ITIS 3135 - Web App Design and Development">
+                            <input type="text" class="course" name="course1" required value="ITSC 3184 - Web-based Application Design and Development">
+                            <button type="button" class="delete-course">Delete</button>
+                        </div>
+                        <div class="course-entry">
+                            <input type="text" class="course" name="course2" required value="ITSC 3164 - Intro to Operating Systems and Networking">
+                            <button type="button" class="delete-course">Delete</button>
+                        </div>
+                        <div class="course-entry">
+                            <input type="text" class="course" name="course3" required value="STAT 3110 - Applied Regression">
                             <button type="button" class="delete-course">Delete</button>
                         </div>
                     </div>
@@ -130,12 +163,12 @@
                 
                 <div>
                     <label for="funny-thing">Funny thing?</label>
-                    <input type="text" id="funny-thing" name="funny-thing" value="Something interesting about you">
+                    <input type="text" id="funny-thing" name="funny-thing" value="I have a twin brother who is also studying Computer Science at UNC Charlotte">
                 </div>
                 
                 <div>
                     <label for="anything-else">Anything else?</label>
-                    <input type="text" id="anything-else" name="anything-else" value="Additional information">
+                    <input type="text" id="anything-else" name="anything-else" value="">
                 </div>
                 
                 <div>
@@ -155,9 +188,6 @@
             <a href="#" id="reset-link">Reset Form</a>
         </div>
     </main>
-
-    
-
   
 </body>
 </html>
