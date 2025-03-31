@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const resultContainer = document.getElementById('result-container');
     const addCourseBtn = document.getElementById('add-course');
     const courseInputs = document.getElementById('course-inputs');
-    const resetLink = document.getElementById('reset-link');
     const imageInput = document.getElementById('image');
     const imagePreview = document.getElementById('image-preview');
     
@@ -70,21 +69,12 @@ document.addEventListener('DOMContentLoaded', function() {
             platform: document.getElementById('platform').value,
             courses: Array.from(document.querySelectorAll('.course')).map(c => c.value),
             funnyThing: document.getElementById('funny-thing').value,
-            anythingElse: document.getElementById('anything-else').value
+            anythingElse: document.getElementById('anything-else').value,
+            imageSrc: imagePreview.src
         };
         
         // Display the results
         displayResults(formData);
-    });
-    
-    // Reset link
-    resetLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        resultContainer.style.display = 'none';
-        formContainer.style.display = 'block';
-        form.reset();
-        imagePreview.style.display = 'none';
-        imagePreview.src = '';
     });
     
     // Function to display results
@@ -99,11 +89,11 @@ document.addEventListener('DOMContentLoaded', function() {
             <h1>Introduction</h1>
             <h2>${data.name} || ${data.mascot}</h2>
             <hr>
-            <h3>Presenting my computer science journey</h3>
+            <h3>Presenting my computer science research</h3>
             
             <div style="display: flex; align-items: center; margin-bottom: 20px;">
                 <div>
-                    <img src="${imagePreview.src}" alt="${data.imageCaption}" style="max-width: 200px; max-height: 200px;">
+                    <img src="${data.imageSrc}" alt="${data.imageCaption}" style="max-width: 200px; max-height: 200px;">
                     <p><em>${data.imageCaption}</em></p>
                 </div>
             </div>
@@ -111,11 +101,11 @@ document.addEventListener('DOMContentLoaded', function() {
             <p><strong>Personal Background:</strong> ${data.personalBg}</p>
             <p><strong>Professional Background:</strong> ${data.professionalBg}</p>
             <p><strong>Academic Background:</strong> ${data.academicBg}</p>
-            <p><strong>Background in Web Development:</strong> ${data.webBg}</p>
+            <p><strong>Background in this subject:</strong> ${data.webBg}</p>
             <p><strong>Primary Computer Platform:</strong> ${data.platform}</p>
-            <p><strong>Courses I'm taking:</strong></p>
+            <p><strong>Courses I'm taking and Why</strong></p>
             ${coursesHtml}
-            <p><strong>Funny thing to remember me by:</strong> ${data.funnyThing}</p>
+            <p><strong>Funny/Interesting Item to Remember me by:</strong> ${data.funnyThing}</p>
             ${data.anythingElse ? `<p><strong>Anything else:</strong> ${data.anythingElse}</p>` : ''}
             
             <a href="#" id="reset-link">Reset Form</a>
@@ -123,5 +113,25 @@ document.addEventListener('DOMContentLoaded', function() {
         
         formContainer.style.display = 'none';
         resultContainer.style.display = 'block';
+        
+        // Reattach reset link event listener
+        document.getElementById('reset-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            resultContainer.style.display = 'none';
+            formContainer.style.display = 'block';
+            form.reset();
+            imagePreview.style.display = 'none';
+            imagePreview.src = '';
+        });
     }
+    
+    // Initial reset link setup
+    document.getElementById('reset-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        resultContainer.style.display = 'none';
+        formContainer.style.display = 'block';
+        form.reset();
+        imagePreview.style.display = 'none';
+        imagePreview.src = '';
+    });
 });
