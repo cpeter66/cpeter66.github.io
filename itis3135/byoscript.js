@@ -17,7 +17,7 @@
             // Validate required fields
             const required = document.querySelectorAll('[required]');
             let valid = true;
-            required.forEach(field => {
+            required.forEach((field) => {
                 if (!field.value) {
                     valid = false;
                     alert('Please fill all required fields!');
@@ -40,7 +40,7 @@
                 <p><strong>Courses:</strong></p>
                 <ul>
                     ${Array.from(document.querySelectorAll('.course'))
-                        .map(course => `<li>${course.value}</li>`)
+                        .map((course) => `<li>${course.value}</li>`)
                         .join('')}
                 </ul>
                 <p><strong>Funny Thing:</strong> ${document.getElementById('funny').value}</p>
