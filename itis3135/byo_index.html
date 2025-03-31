@@ -1,92 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="byoscript.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYO Intro</title>
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <script src="byoscript.js"></script>
+    <title>BYO Intro | Creative Panther | ITIS 3135</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <style>
+        /* Add your custom styles here */
+        #form-container, #result-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        #intro-form div {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        textarea {
+            height: 100px;
+        }
+        
+        .course-entry {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        
+        .course-entry input {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+        
+        #image-preview {
+            max-width: 200px;
+            max-height: 200px;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        #result-container {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <h2>BYO Intro</h2>
-    <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
-    
-    <form id="introForm">
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" required value="John Doe">
-        </div>
-        
-        <div>
-            <label for="mascot">Mascot:</label>
-            <input type="text" id="mascot" required value="Fighting Pickles">
-        </div>
-        
-        <div>
-            <label for="image">Image:</label>
-            <input type="file" id="image" accept=".jpg,.jpeg,.png" required>
-        </div>
-        
-        <div>
-            <label for="imageCaption">Image Caption:</label>
-            <input type="text" id="imageCaption" required value="My school mascot">
-        </div>
-        
-        <div>
-            <label for="personalBg">Personal Background:</label>
-            <textarea id="personalBg" required>I grew up in Charlotte...</textarea>
-        </div>
-        
-        <div>
-            <label for="professionalBg">Professional Background:</label>
-            <textarea id="professionalBg" required>I've worked in IT for 3 years...</textarea>
-        </div>
-        
-        <div>
-            <label for="academicBg">Academic Background:</label>
-            <textarea id="academicBg" required>Currently pursuing a CS degree...</textarea>
-        </div>
-        
-        <div>
-            <label for="webBg">Background in Web Development:</label>
-            <textarea id="webBg" required>Basic HTML/CSS experience...</textarea>
-        </div>
-        
-        <div>
-            <label for="platform">Primary Computer Platform:</label>
-            <input type="text" id="platform" required value="Windows 11">
-        </div>
-        
-        <div id="coursesContainer">
-            <label>Courses currently taking:</label>
-            <div>
-                <input type="text" class="course" required value="ITSC 3135">
-                <button type="button" onclick="addCourse()">Add Course</button>
-            </div>
-        </div>
-        
-        <div>
-            <label for="funny">Funny thing?</label>
-            <input type="text" id="funny" value="I can solve a Rubik's cube">
-        </div>
-        
-        <div>
-            <label for="anything">Anything else?</label>
-            <textarea id="anything">I love hiking!</textarea>
-        </div>
-        
-        <div>
-            <input type="checkbox" required> 
-            <label>I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available.</label>
-        </div>
-        
-        <div>
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
-        </div>
-    </form>
-    
-    <div id="result"></div>
+    <header>
+        <h1>Christian Peters || ITIS 3135</h1>
+    </header>
 
+    <main>
+        <h2>BYO Intro</h2>
+        <!-- user's information input -->
+        <div id="form-container">
+            <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+            
+            <form id="intro-form">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required value="Your Name">
+                </div>
+                
+                <div>
+                    <label for="mascot">Mascot:</label>
+                    <input type="text" id="mascot" name="mascot" required value="Your Mascot">
+                </div>
+                
+                <div>
+                    <label for="image">Image (PNG or JPG):</label>
+                    <input type="file" id="image" name="image" accept=".png,.jpg,.jpeg" required>
+                    <img id="image-preview" alt="Image preview">
+                </div>
+                
+                <div>
+                    <label for="image-caption">Image Caption:</label>
+                    <input type="text" id="image-caption" name="image-caption" required value="Your mascot description">
+                </div>
+                
+                <div>
+                    <label for="personal-bg">Personal Background:</label>
+                    <textarea id="personal-bg" name="personal-bg" required>Tell us about yourself...</textarea>
+                </div>
+                
+                <div>
+                    <label for="professional-bg">Professional Background:</label>
+                    <textarea id="professional-bg" name="professional-bg" required>Your work experience...</textarea>
+                </div>
+                
+                <div>
+                    <label for="academic-bg">Academic Background:</label>
+                    <textarea id="academic-bg" name="academic-bg" required>Your education...</textarea>
+                </div>
+                
+                <div>
+                    <label for="web-bg">Background in Web Development:</label>
+                    <textarea id="web-bg" name="web-bg" required>Your web development experience...</textarea>
+                </div>
+                
+                <div>
+                    <label for="platform">Primary Computer Platform:</label>
+                    <input type="text" id="platform" name="platform" required value="Your OS">
+                </div>
+                
+                <div id="courses-container">
+                    <label>Courses currently taking:</label>
+                    <div id="course-inputs">
+                        <div class="course-entry">
+                            <input type="text" class="course" name="course1" required value="ITIS 3135 - Web App Design and Development">
+                            <button type="button" class="delete-course">Delete</button>
+                        </div>
+                    </div>
+                    <button type="button" id="add-course">Add Another Course</button>
+                </div>
+                
+                <div>
+                    <label for="funny-thing">Funny thing?</label>
+                    <input type="text" id="funny-thing" name="funny-thing" value="Something interesting about you">
+                </div>
+                
+                <div>
+                    <label for="anything-else">Anything else?</label>
+                    <input type="text" id="anything-else" name="anything-else" value="Additional information">
+                </div>
+                
+                <div>
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available.</label>
+                </div>
+                
+                <div>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
+        
+        <div id="result-container">
+            <!-- results will display here -->
+            <a href="#" id="reset-link">Reset Form</a>
+        </div>
+    </main>
+
+    
+
+  
 </body>
 </html>
