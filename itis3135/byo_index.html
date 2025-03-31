@@ -4,92 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BYO Intro</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        form {
-            display: grid;
-            gap: 15px;
-        }
-        label {
-            font-weight: bold;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 8px;
-        }
-        .course-container {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-        button {
-            padding: 8px 15px;
-            cursor: pointer;
-        }
-        #result {
-            display: none;
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin-top: 20px;
-        }
-    </style>
+    <script src="byoscript.js"></script>
 </head>
 <body>
     <h2>BYO Intro</h2>
     <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
     
     <form id="introForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" required value="John Doe">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required value="John Doe">
+        </div>
         
-        <label for="mascot">Mascot:</label>
-        <input type="text" id="mascot" required value="Fighting Pickles">
+        <div>
+            <label for="mascot">Mascot:</label>
+            <input type="text" id="mascot" required value="Fighting Pickles">
+        </div>
         
-        <label for="image">Image:</label>
-        <input type="file" id="image" accept=".jpg,.jpeg,.png" required>
+        <div>
+            <label for="image">Image:</label>
+            <input type="file" id="image" accept=".jpg,.jpeg,.png" required>
+        </div>
         
-        <label for="imageCaption">Image Caption:</label>
-        <input type="text" id="imageCaption" required value="My school mascot">
+        <div>
+            <label for="imageCaption">Image Caption:</label>
+            <input type="text" id="imageCaption" required value="My school mascot">
+        </div>
         
-        <label for="personalBg">Personal Background:</label>
-        <textarea id="personalBg" required>I grew up in Charlotte...</textarea>
+        <div>
+            <label for="personalBg">Personal Background:</label>
+            <textarea id="personalBg" required>I grew up in Charlotte...</textarea>
+        </div>
         
-        <label for="professionalBg">Professional Background:</label>
-        <textarea id="professionalBg" required>I've worked in IT for 3 years...</textarea>
+        <div>
+            <label for="professionalBg">Professional Background:</label>
+            <textarea id="professionalBg" required>I've worked in IT for 3 years...</textarea>
+        </div>
         
-        <label for="academicBg">Academic Background:</label>
-        <textarea id="academicBg" required>Currently pursuing a CS degree...</textarea>
+        <div>
+            <label for="academicBg">Academic Background:</label>
+            <textarea id="academicBg" required>Currently pursuing a CS degree...</textarea>
+        </div>
         
-        <label for="webBg">Background in Web Development:</label>
-        <textarea id="webBg" required>Basic HTML/CSS experience...</textarea>
+        <div>
+            <label for="webBg">Background in Web Development:</label>
+            <textarea id="webBg" required>Basic HTML/CSS experience...</textarea>
+        </div>
         
-        <label for="platform">Primary Computer Platform:</label>
-        <input type="text" id="platform" required value="Windows 11">
+        <div>
+            <label for="platform">Primary Computer Platform:</label>
+            <input type="text" id="platform" required value="Windows 11">
+        </div>
         
         <div id="coursesContainer">
             <label>Courses currently taking:</label>
-            <div class="course-container">
+            <div>
                 <input type="text" class="course" required value="ITSC 3135">
-                <button type="button" onclick="addCourse()">+</button>
+                <button type="button" onclick="addCourse()">Add Course</button>
             </div>
         </div>
         
-        <label for="funny">Funny thing?</label>
-        <input type="text" id="funny" value="I can solve a Rubik's cube">
+        <div>
+            <label for="funny">Funny thing?</label>
+            <input type="text" id="funny" value="I can solve a Rubik's cube">
+        </div>
         
-        <label for="anything">Anything else?</label>
-        <textarea id="anything">I love hiking!</textarea>
+        <div>
+            <label for="anything">Anything else?</label>
+            <textarea id="anything">I love hiking!</textarea>
+        </div>
         
-        <label>
+        <div>
             <input type="checkbox" required> 
-            I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available.
-        </label>
+            <label>I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available.</label>
+        </div>
         
         <div>
             <input type="submit" value="Submit">
@@ -98,8 +86,6 @@
     </form>
     
     <div id="result"></div>
-    
-
 
 </body>
 </html>
