@@ -1,260 +1,86 @@
-:root {
-    --primary-color: #00703C; /* UNCC Green */
-    --secondary-color: #B3A369; /* UNCC Gold */
-    --accent-color: #E31937;    /* Accent red */
-    --light-gray: #f5f5f5;
-    --dark-gray: #333;
-    --text-color: #444;
+/* Contact Page Specific Styles */
+.contact-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-/* Global Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin: 2rem 0;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: #fff;
-}
-
-a {
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: var(--accent-color);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Header Styles */
-header {
+.contact-info {
     background-color: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    padding: 1rem 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-.logo {
+.info-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
-}
-
-.logo img {
-    height: 60px;
-    width: auto;
-    background-color: transparent;
-    box-shadow: none;
-    border: none;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-nav a {
-    font-weight: 600;
-    padding: 0.5rem 0;
-    position: relative;
-}
-
-nav a:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--secondary-color);
-    transition: width 0.3s;
-}
-
-nav a:hover:after,
-nav .active a:after {
-    width: 100%;
-}
-
-.mobile-menu {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-/* Main Content Styles */
-main {
-    min-height: 80vh;
-    padding: 2rem;
-}
-
-h1, h2, h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.btn {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: all 0.3s;
-    border: none;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: var(--secondary-color);
-    color: var(--dark-gray);
-    transform: translateY(-2px);
-}
-
-.btn-outline {
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-}
-
-/* Footer Styles */
-footer {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 2rem;
-    text-align: center;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.social-links {
-    margin-bottom: 1rem;
-}
-
-.social-links a {
-    color: white;
-    font-size: 1.5rem;
-    margin: 0 0.5rem;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: var(--secondary-color);
-}
-
-.validation a {
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header {
-        padding: 1rem;
-    }
-    
-    nav ul {
-        display: none;
-        flex-direction: column;
-        gap: 1rem;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        right: 0;
-        background-color: white;
-        padding: 1rem;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    nav ul.show {
-        display: flex;
-    }
-    
-    .mobile-menu {
-        display: block;
-    }
-}
-
-/* Featured Photos Section */
-.featured-photos {
-    text-align: center;
-    padding: 3rem 1rem;
-    background-color: var(--light-gray);
-}
-
-.featured-photos h2 {
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-}
-
-.photo-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.photo-item {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    max-width: 300px;
-    transition: transform 0.3s ease;
-}
-
-.photo-item img {
-    border-radius: 10px;
-    width: 100%;
-    height: auto;
-    margin-bottom: 0.5rem;
-}
-
-.photo-item p {
-    font-style: italic;
-    color: var(--dark-gray);
-}
-
-.photo-item:hover {
-    transform: translateY(-5px);
-}
-
-/* Contact Page Specific */
-.contact-page h2,
-.contact-info h3,
-.contact-form h3,
-.map-container h3 {
-    color: var(--primary-color);
+    margin-bottom: 1.5rem;
 }
 
 .info-item i {
+    font-size: 1.2rem;
     color: var(--secondary-color);
+    margin-top: 0.2rem;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.error-message {
+    color: var(--accent-color);
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    display: block;
 }
 
 .submit-btn {
     background-color: var(--primary-color);
     color: white;
+    padding: 0.8rem 1.5rem;
     border: none;
     border-radius: 5px;
+    font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 100%;
 }
 
 .submit-btn:hover {
@@ -265,13 +91,46 @@ footer {
     background-color: rgba(0, 112, 60, 0.1);
     color: var(--primary-color);
     border: 1px solid var(--secondary-color);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    display: none;
+    text-align: center;
 }
 
 .success-message i {
     color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.map-container {
+    margin-top: 3rem;
+}
+
+.map {
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .contact-body {
     background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
-    color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-page {
+        padding: 1rem;
+    }
 }

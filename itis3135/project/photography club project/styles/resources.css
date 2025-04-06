@@ -1,45 +1,40 @@
-:root {
-    --primary-color: #00703C;   /* Updated Green */
-    --secondary-color: #B3A369; /* Updated Gold */
-    --accent-color: #E31937;    /* Accent Red */
-    --light-gray: #f5f5f5;
-    --dark-gray: #333;
-    --text-color: #444;
-}
-
-/* Resources Page Styles */
+/* Resources Page Specific Styles */
 .resources-page {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 2rem;
+}
+
+.resource-categories {
+    margin: 2rem 0;
 }
 
 .category-tabs {
     display: flex;
     gap: 0.5rem;
-    margin: 2rem 0 1rem;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
     flex-wrap: wrap;
 }
 
 .tab-btn {
     padding: 0.5rem 1.5rem;
-    background-color: transparent;
-    border: none;
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
     border-radius: 20px;
     cursor: pointer;
-    font-weight: 600;
     transition: all 0.3s;
+    font-weight: 600;
 }
 
-.tab-btn.active {
+.tab-btn.active,
+.tab-btn:hover {
     background-color: var(--primary-color);
     color: white;
 }
 
 .tab-content {
     display: none;
-    margin: 1rem 0 3rem;
 }
 
 .tab-content.active {
@@ -48,9 +43,9 @@
 
 .resource-card {
     background-color: white;
+    padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    padding: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
@@ -59,6 +54,7 @@
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 0.5rem;
+    color: var(--primary-color);
 }
 
 .resource-link {
@@ -68,6 +64,10 @@
     font-weight: 600;
 }
 
+.resource-link:hover {
+    color: var(--accent-color);
+}
+
 .club-resources {
     margin: 3rem 0;
 }
@@ -75,19 +75,27 @@
 .equipment-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .equipment-table th,
 .equipment-table td {
     padding: 1rem;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #eee;
 }
 
 .equipment-table th {
-    background-color: var(--light-gray);
-    font-weight: 600;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.equipment-table tr:last-child td {
+    border-bottom: none;
 }
 
 .reserve-btn {
@@ -96,7 +104,6 @@
     color: var(--dark-gray);
     border: none;
     border-radius: 5px;
-    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -111,19 +118,33 @@
 }
 
 .external-links {
-    list-style: none;
-    margin: 1rem 0;
+    list-style-type: none;
 }
 
 .external-links li {
     margin-bottom: 0.5rem;
-    padding-left: 1.5rem;
-    position: relative;
+    padding: 0.5rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.external-links li:before {
-    content: '→';
-    position: absolute;
-    left: 0;
+.external-links a {
+    font-weight: 600;
     color: var(--primary-color);
+}
+
+.external-links a:hover {
+    color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .resources-page {
+        padding: 1rem;
+    }
+    
+    .equipment-table {
+        display: block;
+        overflow-x: auto;
+    }
 }
