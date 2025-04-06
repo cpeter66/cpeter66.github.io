@@ -185,3 +185,49 @@ footer {
         display: block;
     }
 }
+/* Featured Photos Section */
+.featured-photos {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: var(--light-gray);
+}
+
+.featured-photos h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photo-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.photo-item img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.photo-item p {
+    font-style: italic;
+    color: var(--dark-gray);
+}
+
+/* Add hover effect */
+.photo-item:hover {
+    transform: translateY(-5px);
+}
