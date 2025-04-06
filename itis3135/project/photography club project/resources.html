@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | UNC Charlotte Photography Club</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/resources.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Photography Club Logo">
+            <h1>UNC Charlotte Photography Club</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li class="active"><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="resources-page">
+        <h2>Photography Resources</h2>
+        
+        <div class="resource-categories">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-tab="tutorials">Tutorials</button>
+                <button class="tab-btn" data-tab="gear">Gear Guide</button>
+                <button class="tab-btn" data-tab="software">Software</button>
+                <button class="tab-btn" data-tab="locations">Local Spots</button>
+            </div>
+
+            <div class="tab-content active" id="tutorials">
+                <div class="resource-card">
+                    <h3><i class="fas fa-video"></i> Beginner's Photography Guide</h3>
+                    <p>A comprehensive video series covering the basics of exposure, composition, and camera settings.</p>
+                    <a href="#" class="resource-link">View Tutorial →</a>
+                </div>
+                
+                <div class="resource-card">
+                    <h3><i class="fas fa-lightbulb"></i> Lighting Techniques</h3>
+                    <p>Learn how to work with natural light, studio lighting, and modifiers to create stunning images.</p>
+                    <a href="#" class="resource-link">View Guide →</a>
+                </div>
+            </div>
+
+            <div class="tab-content" id="gear">
+                <div class="resource-card">
+                    <h3><i class="fas fa-camera"></i> Starter Camera Guide</h3>
+                    <p>Our recommendations for beginner-friendly DSLR and mirrorless cameras under $800.</p>
+                    <a href="#" class="resource-link">View Guide →</a>
+                </div>
+                
+                <div class="resource-card">
+                    <h3><i class="fas fa-lens"></i> Essential Lenses</h3>
+                    <p>Which lenses should you invest in first? We break down the options by photography style.</p>
+                    <a href="#" class="resource-link">View Guide →</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="club-resources">
+            <h3>Club Equipment Available for Checkout</h3>
+            <table class="equipment-table">
+                <thead>
+                    <tr>
+                        <th>Equipment</th>
+                        <th>Availability</th>
+                        <th>Reserve</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Canon EOS R6</td>
+                        <td>2 Available</td>
+                        <td><button class="reserve-btn">Request</button></td>
+                    </tr>
+                    <tr>
+                        <td>Sony 24-70mm f/2.8 Lens</td>
+                        <td>1 Available</td>
+                        <td><button class="reserve-btn">Request</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="recommended-links">
+            <h3>Recommended Websites</h3>
+            <ul class="external-links">
+                <li><a href="https://photographylife.com" target="_blank">Photography Life</a> - Comprehensive tutorials</li>
+                <li><a href="https://fstoppers.com" target="_blank">Fstoppers</a> - Photography news and articles</li>
+                <li><a href="https://petapixel.com" target="_blank">PetaPixel</a> - Photography technology news</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-flickr"></i></a>
+            </div>
+            <p>&copy; 2023 UNC Charlotte Photography Club. All rights reserved.</p>
+            <div class="validation">
+                <a href="https://validator.w3.org/check?uri=referer">HTML Valid</a> | 
+                <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS Valid</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

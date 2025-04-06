@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | UNC Charlotte Photography Club</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/scripts.js" defer></script>
+    <style>
+        :root {
+            --primary-color: #00703C; /* UNC Charlotte Green */
+            --secondary-color: #B3A369; /* UNC Charlotte Gold */
+            --accent-color: #E31937; /* Accent color for errors */
+        }
+        
+        .contact-page h2, 
+        .contact-info h3, 
+        .contact-form h3,
+        .map-container h3 {
+            color: var(--primary-color);
+        }
+        
+        .info-item i {
+            color: var(--secondary-color);
+        }
+        
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #005a32; /* Darker green */
+        }
+                
+        .success-message {
+            background-color: rgba(0, 112, 60, 0.1);
+            color: var(--primary-color);
+            border: 1px solid var(--secondary-color);
+        }
+        
+        .success-message i {
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Photography Club Logo">
+            <h1>UNC Charlotte Photography Club</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li class="active"><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <h2>Contact Us</h2>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>photographyclub@uncc.edu</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>(704) 687-5555</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Student Union, Room 210<br>UNC Charlotte<br>9201 University City Blvd<br>Charlotte, NC 28223</p>
+                </div>
+                
+                <h3>Meeting Times</h3>
+                <p>Every Wednesday at 6:00 PM during the academic year</p>
+                
+                <div>
+                    <h3>Follow Us</h3>
+                    <div>
+                        <p>All Soicals: @UNCCharlottePhotography</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="general">General Inquiry</option>
+                            <option value="membership">Membership Question</option>
+                            <option value="event">Event Question</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                
+                <div id="successMessage" class="success-message">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Thank you! Your message has been sent successfully.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <h3>Find Us on Campus</h3>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.092874955522!2d-80.7348479241649!3d35.307126372668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88541c1b42a1789b%3A0x8e8f0e3b5f5f5f5f!2sUNC%20Charlotte%20Student%20Union!5e0!3m2!1sen!2sus!4v1697234567890!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 UNC Charlotte Photography Club. All rights reserved.</p>
+            <div class="validation">
+                <a href="https://validator.w3.org/check?uri=referer">HTML Valid</a> | 
+                <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS Valid</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

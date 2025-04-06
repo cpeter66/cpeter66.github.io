@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | UNC Charlotte Photography Club</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Photography Club Logo">
+            <h1>UNC Charlotte Photography Club</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li class="active"><a href="events.html">Events</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="events-page">
+        <h2>Upcoming Events</h2>
+        
+        <div class="event-filters">
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">All Events</button>
+                <button class="filter-btn" data-filter="workshop">Workshops</button>
+                <button class="filter-btn" data-filter="photowalk">Photo Walks</button>
+                <button class="filter-btn" data-filter="exhibition">Exhibitions</button>
+            </div>
+            <div class="calendar-view">
+                <a href="#" class="calendar-link">
+                    <i class="far fa-calendar-alt"></i> View Calendar
+                </a>
+            </div>
+        </div>
+
+        <div class="events-container">
+            <div class="event-card workshop">
+                <div class="event-date">
+                    <span class="day">15</span>
+                    <span class="month">OCT</span>
+                </div>
+                <div class="event-details">
+                    <h3>Fall Colors Photo Walk</h3>
+                    <p class="event-time"><i class="far fa-clock"></i> 8:00 AM - 11:00 AM</p>
+                    <p class="event-location"><i class="fas fa-map-marker-alt"></i> UNC Charlotte Botanical Gardens</p>
+                    <p class="event-description">Join us for a morning walk through the botanical gardens to capture the beautiful autumn foliage. All skill levels welcome!</p>
+                    <div class="event-actions">
+                        <button class="rsvp-btn">RSVP</button>
+                        <a href="#" class="details-link">More Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card workshop">
+                <div class="event-date">
+                    <span class="day">22</span>
+                    <span class="month">OCT</span>
+                </div>
+                <div class="event-details">
+                    <h3>Introduction to Portrait Lighting</h3>
+                    <p class="event-time"><i class="far fa-clock"></i> 3:00 PM - 5:00 PM</p>
+                    <p class="event-location"><i class="fas fa-map-marker-alt"></i> Student Union Room 340</p>
+                    <p class="event-description">Learn the fundamentals of portrait lighting techniques with professional photographer Sarah Johnson.</p>
+                    <div class="event-actions">
+                        <button class="rsvp-btn">RSVP</button>
+                        <a href="#" class="details-link">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="past-events">
+            <h3>Past Events</h3>
+            <div class="past-event-gallery">
+                <div class="past-event">
+                    <img src="images/events/past1.jpg" alt="Summer Photo Walk">
+                    <p>Summer Photo Walk - August 2023</p>
+                </div>
+                <div class="past-event">
+                    <img src="images/events/past2.jpg" alt="Lightning Workshop">
+                    <p>Lightning Workshop - July 2023</p>
+                </div>
+            </div>
+            <a href="#" class="view-all">View All Past Events →</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-flickr"></i></a>
+            </div>
+            <p>&copy; 2023 UNC Charlotte Photography Club. All rights reserved.</p>
+            <div class="validation">
+                <a href="https://validator.w3.org/check?uri=referer">HTML Valid</a> | 
+                <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS Valid</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

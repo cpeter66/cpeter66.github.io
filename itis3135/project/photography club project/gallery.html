@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | UNC Charlotte Photography Club</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/lightbox.js" defer></script>
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Photography Club Logo">
+            <h1>UNC Charlotte Photography Club</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="active"><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="gallery-page">
+        <h2>Member Gallery</h2>
+        
+        <div class="gallery-controls">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="landscape">Landscape</button>
+                <button class="filter-btn" data-filter="portrait">Portrait</button>
+                <button class="filter-btn" data-filter="street">Street</button>
+                <button class="filter-btn" data-filter="wildlife">Wildlife</button>
+            </div>
+            <div class="sort-options">
+                <label for="sort">Sort by:</label>
+                <select id="sort">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="popular">Most Likes</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="photo-gallery">
+            <div class="gallery-item landscape" data-date="2023-10-05" data-likes="42">
+                <a href="images/gallery/large1.jpg" data-lightbox="gallery" data-title="Mountain Sunrise by Jamie R.">
+                    <img src="images/gallery/thumb1.jpg" alt="Mountain sunrise">
+                    <div class="photo-info">
+                        <span class="photo-title">Mountain Sunrise</span>
+                        <span class="photo-author">Jamie R.</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="gallery-item portrait" data-date="2023-09-28" data-likes="37">
+                <a href="images/gallery/large2.jpg" data-lightbox="gallery" data-title="Urban Portrait by Mark T.">
+                    <img src="images/gallery/thumb2.jpg" alt="Urban portrait">
+                    <div class="photo-info">
+                        <span class="photo-title">Urban Portrait</span>
+                        <span class="photo-author">Mark T.</span>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Additional gallery items would go here -->
+        </div>
+
+        <div class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <span class="dots">...</span>
+            <button class="page-btn">Next</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-flickr"></i></a>
+            </div>
+            <p>&copy; 2023 UNC Charlotte Photography Club. All rights reserved.</p>
+            <div class="validation">
+                <a href="https://validator.w3.org/check?uri=referer">HTML Valid</a> | 
+                <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS Valid</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

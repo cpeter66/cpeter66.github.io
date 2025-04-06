@@ -1,0 +1,120 @@
+/* Resources Page Styles */
+.resources-page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin: 2rem 0 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    margin: 1rem 0 3rem;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.resource-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.resource-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.resource-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.club-resources {
+    margin: 3rem 0;
+}
+
+.equipment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.equipment-table th,
+.equipment-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.equipment-table th {
+    background-color: var(--light-gray);
+    font-weight: 600;
+}
+
+.reserve-btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: var(--dark-gray);
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.reserve-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.recommended-links {
+    margin: 3rem 0;
+}
+
+.external-links {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.external-links li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.external-links li:before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
