@@ -1,3 +1,12 @@
+:root {
+    --primary-color: #00703C;   /* Updated Green */
+    --secondary-color: #B3A369; /* Updated Gold */
+    --accent-color: #E31937;    /* Accent Red */
+    --light-gray: #f5f5f5;
+    --dark-gray: #333;
+    --text-color: #444;
+}
+
 /* Resources Page Styles */
 .resources-page {
     max-width: 1200px;
