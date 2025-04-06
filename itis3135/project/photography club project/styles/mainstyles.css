@@ -53,8 +53,13 @@ header {
 }
 
 .logo img {
-    height: 50px;
+    height: auto;
+    max-height: 50px;
+    width: auto;
+    max-width: 150px; /* Or whatever max width makes sense for your layout */
+    object-fit: contain;
 }
+
 
 nav ul {
     display: flex;
