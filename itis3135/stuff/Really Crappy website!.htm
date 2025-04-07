@@ -45,28 +45,50 @@
             text-align: center;
             list-style-position: inside;
         }
+        /* Added styles for links */
+        a:link {
+            color: hotpink;
+        }
+        a:visited {
+            color: purple;
+        }
+        a:hover {
+            color: lime;
+        }
+        a:active {
+            color: red;
+        }
     </style>
 </head>
 <body>
-    <h2>Being in the right order</h2>
+    <!-- Inline style example -->
+    <h2 style="color: fuchsia; font-size: 10px;">Being in the right order</h2>
     <h1>Is overrated</h1>
 
     <p>Huge text! for some reason</p>
 
     <p>Inconsistent margins</p>
 
-    <p>Underlined text but no link</p>
+    <!-- Link with default colors -->
+    <p><a href="https://www.example.com">Underlined text but no link - FIXED: Now it's a link!</a></p>
 
     <p>This text has a random ugly background color</p>
     
-    <ul>
+    <ul class="ul">
         <li>Centered bullet point</li>
         <li>Another one</li>
         <li>A third for good measure</li>
     </ul>
     
-    <img src="bad picture with long name for website.jpg" width="400" height="400" alt="idk where i found this picture">
+    <!-- Absolute link example -->
+    <p>Here's an absolute link to <a href="https://www.google.com">Google</a></p>
     
+    <!-- Element with border -->
+    <div class="large-border">
+        This div has a crazy border with different styles on each side!
+    </div>
+    
+    <img src="bad picture with long name for website.jpg" width="400" height="400" alt="idk where i found this picture">
     
     <h3>Why bothre making this a caption</h3>
 
@@ -75,8 +97,3 @@
     <p class="times">Times New Roman is the best</p>
     
     <p>Extra blank lines below:</p>
-
-
-
-</body>
-</html>
