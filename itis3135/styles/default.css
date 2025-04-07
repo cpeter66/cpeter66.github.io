@@ -31,6 +31,47 @@ figure{
     text-align: center;
     font-style: italic;
 }
+/* Font changes */
+body {
+    font-family: 'Georgia', serif; /* Changed from default */
+}
+
+h1, h2, h3 {
+    font-family: 'Verdana', sans-serif; /* Different font for headings */
+}
+
+footer {
+    font-family: 'Courier New', monospace; /* Distinct font for footer */
+}
+/* Color changes */
+body {
+    background-color: #f0f8ff; /* AliceBlue background */
+    color: #2f4f4f; /* DarkSlateGray text */
+}
+
+header {
+    background-color: #4682b4; /* SteelBlue header */
+    color: #fffaf0; /* FloralWhite text */
+}
+
+main {
+    background-color: #fffafa; /* Snow background */
+    border: 2px solid #dda0dd; /* Plum border */
+}
+
+footer {
+    background-color: #696969; /* DimGray footer */
+    color: #f5deb3; /* Wheat text */
+}
+
+a {
+    color: #800080; /* Purple links */
+}
+
+a:hover {
+    color: #ff4500; /* OrangeRed on hover */
+}
+
 /* Responsive Design Media Queries */
 
 /* Large Screens (Desktops & Laptops) */
