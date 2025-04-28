@@ -3,130 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNC Charlotte Photography Club</title>
-    <link rel="stylesheet" href="styles/mainstyles.css">
-    <link rel="stylesheet" href="styles/index.css"> <!-- Added specific index styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/scripts.js" defer></script>
+    <title>49er Shutterbugs - UNCC Photography Club</title>
+    <link rel="stylesheet" href="styles/clientproj.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header remains the same -->
     <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Photography Club Logo">
-            <h1>UNC Charlotte Photography Club</h1>
+        <div class="header-content">
+            <h1>49er Shutterbugs</h1>
+            <p>UNCC Photography Club</p>
         </div>
         <nav>
             <ul>
                 <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./events.html">Events</a></li>
+                <li><a href="./resources.html">Resources</a></li>
             </ul>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Slideshow -->
-        <section class="hero-slideshow">
-            <div class="slide active">
-                <div class="slide-image-container">
-                    <img src="images/ORGs_24220_9071_ah.jpg" alt="Photography Club Members">
-                </div>
-                <div class="slide-text">
-                    <h2>Capture the Moment</h2>
-                    <p>Join our community of passionate photographers</p>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide-image-container">
-                    <img src="images/cameraequip.jpg" alt="Camera Equipment">
-                </div>
-                <div class="slide-text">
-                    <h2>Learn & Grow</h2>
-                    <p>Workshops and photo walks every month</p>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide-image-container">
-                    <img src="images/GR_CAB_Bash_24028_1374_kpl.jpg" alt="Photo Exhibition">
-                </div>
-                <div class="slide-text">
-                    <h2>Showcase Your Work</h2>
-                    <p>Annual student photography exhibition</p>
-                </div>
-            </div>
-            <div class="slide-controls">
-                <button class="prev"><i class="fas fa-chevron-left"></i></button>
-                <button class="next"><i class="fas fa-chevron-right"></i></button>
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Capture the Moment, Share the Vision</h2>
+                <p>Join UNCC's premier photography community</p>
+                <a href="about.html" class="cta-button">Learn More</a>
             </div>
         </section>
 
-        <!-- Welcome Section -->
-        <section class="welcome">
-            <h2>Welcome to the Photography Club</h2>
-            <p>We are a student-run organization at UNC Charlotte dedicated to helping photographers of all skill levels improve their craft through workshops, photo walks, and community events.</p>
-            <div class="cta-buttons">
-                <a href="about.html" class="btn">Learn More</a>
-                <a href="contact.html" class="btn btn-outline">Join Us</a>
-            </div>
-        </section>
-
-        <!-- Featured Photos -->
-        <section class="featured-photos">
-            <h2>Member Spotlight</h2>
+        <section class="featured">
+            <h2>Featured Photos</h2>
             <div class="photo-grid">
-                <div class="photo-item">
-                    <div class="photo-container">
-                        <img src="images/DSCN1502.JPG" alt="Landscape Photography">
-                    </div>
-                    <p>"Golden Hour" by Sarah J.</p>
+                <div class="photo-card">
+                    <img src="images/feature1.jpg" alt="Campus sunset">
+                    <p>UNCC Campus Sunset</p>
                 </div>
-                <div class="photo-item">
-                    <div class="photo-container">
-                        <img src="images/DSCN1505.JPG" alt="Portrait Photography">
-                    </div>
-                    <p>"Life at the beach" by Mark T.</p>
+                <div class="photo-card">
+                    <img src="images/feature2.jpg" alt="Charlotte skyline">
+                    <p>Charlotte Skyline</p>
                 </div>
-                <div class="photo-item">
-                    <div class="photo-container">
-                        <img src="images/DSCN1479.JPG" alt="Street Photography">
-                    </div>
-                    <p>"Snow on the bluff" by Alex K."</p>
+                <div class="photo-card">
+                    <img src="images/feature3.jpg" alt="Nature close-up">
+                    <p>Nature Close-Up</p>
                 </div>
             </div>
         </section>
 
-        <!-- Upcoming Events -->
-        <section class="upcoming-events">
-            <h2>Upcoming Events</h2>
-            <div class="event-card">
-                <div class="event-date">
-                    <span class="day">15</span>
-                    <span class="month">OCT</span>
-                </div>
-                <div class="event-details">
-                    <h3>Fall Colors Photo Walk</h3>
-                    <p>Join us for a morning walk through the botanical gardens to capture autumn foliage.</p>
-                    <a href="events.html" class="event-link">Details →</a>
-                </div>
+        <section class="announcements">
+            <h2>Club Announcements</h2>
+            <div class="announcement-card">
+                <h3>Next Meeting: October 15th</h3>
+                <p>6:30 PM in Student Union 340</p>
+                <p>Guest speaker on portrait photography techniques</p>
             </div>
         </section>
     </main>
 
-    <!-- Footer remains the same -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2023 UNC Charlotte Photography Club. All rights reserved.</p>
-            <div class="validation">
-                <a href="https://validator.w3.org/check?uri=referer">HTML Valid</a> |
-                <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS Valid</a>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <p><i class="fas fa-envelope"></i> photography@uncc.edu</p>
+                <p><i class="fas fa-phone"></i> (704) 555-1234</p>
             </div>
+            <div class="footer-section">
+                <h3>Meeting Times</h3>
+                <p>Every Tuesday at 6:30 PM</p>
+                <p>Student Union Room 340</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 49er Shutterbugs. All rights reserved.</p>
+            <p>
+                <a href="https://validator.w3.org/check?uri=referer">HTML Valid</a> | 
+                <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS Valid</a>
+            </p>
         </div>
     </footer>
 </body>
