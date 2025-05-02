@@ -1,86 +1,60 @@
-/* Add this to your existing globalstyles.css */
-.hero {
-    background: linear-gradient(135deg, #00703C 0%, #00552e 100%);
+:root {
+    --uncc-green: #00703C;
+    --uncc-gold: #B3A369;
+    --text-dark: #000000; /* Changed to pure black */
+    --text-medium: #333333;
+    --text-light: #666666;
+    --bg-light: #f9f9f9;
+    --bg-white: #ffffff;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header - Black with gold accents */
+.header {
+    background-color: var(--text-dark);
     color: white;
-    padding: 6rem 0;
-    text-align: center;
+    padding: 1rem 0;
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.nav-link:hover,
+.nav-link.current {
+    color: var(--uncc-gold);
 }
 
-.hero p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.btn-outline {
-    background-color: transparent;
-    border: 2px solid white;
+/* Buttons - Green and gold */
+.btn-primary {
+    background-color: var(--uncc-green);
     color: white;
 }
 
-.btn-outline:hover {
-    background-color: rgba(255,255,255,0.1);
-}
-
-.section-title {
+.btn-secondary {
+    background-color: var(--uncc-gold);
     color: var(--text-dark);
 }
 
-.gallery-preview, .events, .testimonials, .cta {
-    padding: 4rem 0;
-    text-align: center;
-}
-
-.gallery-preview h2, .events h2, .testimonials h2, .cta h2 {
-    margin-bottom: 2rem;
-}
-
-.gallery-grid, .events-grid, .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.testimonial-card {
+/* Cards - White with green/gold accents */
+.card {
     background-color: var(--bg-white);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.member-info {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.member-info img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.cta {
-    background-color: var(--uncc-gold);
-    color: white;
-}
-
+/* Footer - Black with gold accents */
 .footer {
     background-color: var(--text-dark);
     color: white;
@@ -88,8 +62,6 @@
     text-align: center;
 }
 
-.copyright {
-    color: var(--text-light);
-    font-size: 0.875rem;
-    margin-top: 0.5rem;
+.footer a {
+    color: var(--uncc-gold);
 }

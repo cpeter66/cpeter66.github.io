@@ -1,77 +1,25 @@
-/* About Page */
-.about-section {
-    padding: 4rem 0;
-}
-
-.about-content {
-    background-color: var(--bg-white);
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: var(--shadow-sm);
-    margin-bottom: 3rem;
-}
-
-.team-section {
-    background-color: var(--bg-light);
-    padding: 4rem 0;
-}
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.leader-card {
-    background-color: var(--bg-white);
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
-}
-
-.leader-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-}
-
-.leader-image {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid var(--uncc-gold);
-    margin: 0 auto 1rem;
-}
-
-.leader-name {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.leader-role {
-    color: var(--uncc-green);
-    font-weight: 500;
-    margin-bottom: 1rem;
-}
-
-.leader-bio {
-    color: var(--text-medium);
-    font-size: 0.875rem;
-}
+/* About Section - White background with green headings */
 .about-section {
     background-color: var(--bg-white);
 }
 
 .about-content h2 {
     color: var(--uncc-green);
-    margin-bottom: 1.5rem;
 }
 
-.team-section h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--text-dark);
+/* Team Section - Light background with gold accents */
+.team-section {
+    background-color: var(--bg-light);
+}
+
+.leader-card {
+    border: 1px solid rgba(179, 163, 105, 0.3);
+}
+
+.leader-role {
+    color: var(--uncc-green);
+}
+
+.leader-image {
+    border: 3px solid var(--uncc-gold);
 }

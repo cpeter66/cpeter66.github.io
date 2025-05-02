@@ -1,84 +1,36 @@
-/* Featured Photos */
-.card-hover {
-    transition: all 0.3s ease;
-    position: relative;
+/* Hero Section - Green gradient */
+.hero {
+    background: linear-gradient(135deg, var(--uncc-green) 0%, #00552e 100%);
+    color: white;
 }
 
-.card-hover:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
-                0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-/* Gallery items */
+/* Featured Gallery - White cards with green/gold accents */
 .gallery-item {
-    transition: all 0.3s ease;
-    cursor: pointer;
-    overflow: hidden;
+    background: var(--bg-white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.gallery-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+.gallery-item h3 {
+    color: var(--uncc-green);
 }
 
-.gallery-item img {
-    transition: transform 0.5s ease;
+/* Events Section - Gold accents */
+.event-card .event-date {
+    background-color: var(--uncc-green);
 }
 
-.gallery-item:hover img {
-    transform: scale(1.05);
+.event-time i {
+    color: var(--uncc-gold);
 }
 
-/* Event cards */
-.event-card {
-    transition: all 0.3s ease;
+/* Testimonials - Black text on white */
+.testimonial-card {
+    background: var(--bg-white);
+    color: var(--text-dark);
 }
 
-.event-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-.event-card:hover .event-date {
-    background-color: #B3A369;
-    color: white;
-}
-
-/* Countdown timer */
-.countdown-item {
-    background-color: #00703C;
-    color: white;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    text-align: center;
-    min-width: 60px;
-}
-
-.countdown-number {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.countdown-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-}
-
-/* About preview section */
-.about-preview {
-    background-color: black;
-    color: white;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
-                0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-/* Hero section */
-.hero-gradient {
-    background: linear-gradient(135deg, #00703C 0%, #00552e 100%);
-    position: relative;
-    overflow: hidden;
+/* CTA Section - Gold background */
+.cta {
+    background-color: var(--uncc-gold);
+    color: var(--text-dark);
 }
