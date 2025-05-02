@@ -3,57 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - 49er Shutterbugs</title>
-    <link rel="stylesheet" href="styles/clientproj.css">
+    <title>UNCC Photography Club | Gallery</title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/gallery.css">
 </head>
-<body>
-    <header>
-        <div class="header-content">
-            <h1>49er Shutterbugs</h1>
-            <p>UNCC Photography Club</p>
+<body class="bg-gray-50 font-sans">
+    <!-- Header/Navigation -->
+    <header class="bg-black text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i class="fas fa-camera text-2xl text-uncc-gold mr-2"></i>
+                    <h1 class="text-xl font-bold">UNCC Photography Club</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-uncc-gold">Home</a>
+                    <a href="about.html" class="hover:text-uncc-gold">About</a>
+                    <a href="gallery.html" class="font-medium text-uncc-gold">Gallery</a>
+                    <a href="events.html" class="hover:text-uncc-gold">Events</a>
+                    <a href="contact.html" class="hover:text-uncc-gold">Contact</a>
+                </nav>
+                <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden mt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html" class="hover:text-uncc-gold">Home</a>
+                    <a href="about.html" class="hover:text-uncc-gold">About</a>
+                    <a href="gallery.html" class="font-medium text-uncc-gold">Gallery</a>
+                    <a href="events.html" class="hover:text-uncc-gold">Events</a>
+                    <a href="contact.html" class="hover:text-uncc-gold">Contact</a>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="gallery.html">Gallery</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./events.html">Events</a></li>
-                <li><a href="./resources.html">Resources</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
-        <section class="gallery-controls">
-            <h2>Member Gallery</h2>
-            <div class="filter-options">
-                <label for="category-filter">Filter by:</label>
-                <select id="category-filter">
-                    <option value="all">All Categories</option>
-                    <option value="landscape">Landscape</option>
-                    <option value="portrait">Portrait</option>
-                    <option value="street">Street</option>
-                </select>
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <!-- Gallery Filters -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-black mb-8 text-center border-b-2 border-uncc-gold pb-2 inline-block">Photo Gallery</h2>
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="gallery-filter-btn active" data-filter="all">All</button>
+                <button class="gallery-filter-btn" data-filter="nature">Nature</button>
+                <button class="gallery-filter-btn" data-filter="portrait">Portrait</button>
+                <button class="gallery-filter-btn" data-filter="street">Street</button>
+                <button class="gallery-filter-btn" data-filter="architecture">Architecture</button>
+                <button class="gallery-filter-btn" data-filter="event">Club Events</button>
             </div>
-        </section>
-
-        <section class="photo-gallery">
+            
+            <!-- Gallery Grid -->
             <div class="gallery-grid">
-                <div class="gallery-item" data-category="landscape">
-                    <img src="images/gallery1.jpg" alt="Mountain landscape">
-                    <p>Blue Ridge Parkway - John D.</p>
+                <!-- Gallery items remain the same as before -->
+                <!-- Nature -->
+                <div class="gallery-item" data-category="nature">
+                    <img src="https://source.unsplash.com/random/600x400/?nature" alt="Nature Photography" class="gallery-image">
+                    <div class="gallery-info">
+                        <h3 class="font-semibold text-lg mb-2">Mountain Sunrise</h3>
+                        <p class="text-gray-600 text-sm">By: Jane Doe</p>
+                    </div>
                 </div>
+                
+                <!-- Portrait -->
                 <div class="gallery-item" data-category="portrait">
-                    <img src="images/gallery2.jpg" alt="Portrait">
-                    <p>Senior Portrait - Sarah J.</p>
+                    <img src="https://source.unsplash.com/random/600x400/?portrait" alt="Portrait Photography" class="gallery-image">
+                    <div class="gallery-info">
+                        <h3 class="font-semibold text-lg mb-2">Urban Portrait</h3>
+                        <p class="text-gray-600 text-sm">By: John Smith</p>
+                    </div>
                 </div>
-                <!-- More gallery items -->
+                
+                <!-- Architecture -->
+                <div class="gallery-item" data-category="architecture">
+                    <img src="https://source.unsplash.com/random/600x400/?architecture" alt="Architecture Photography" class="gallery-image">
+                    <div class="gallery-info">
+                        <h3 class="font-semibold text-lg mb-2">City Skyline</h3>
+                        <p class="text-gray-600 text-sm">By: Alex Johnson</p>
+                    </div>
+                </div>
+                
+                <!-- Street -->
+                <div class="gallery-item" data-category="street">
+                    <img src="https://source.unsplash.com/random/600x400/?street" alt="Street Photography" class="gallery-image">
+                    <div class="gallery-info">
+                        <h3 class="font-semibold text-lg mb-2">Downtown</h3>
+                        <p class="text-gray-600 text-sm">By: Maria Garcia</p>
+                    </div>
+                </div>
+                
+                <!-- Event -->
+                <div class="gallery-item" data-category="event">
+                    <img src="https://source.unsplash.com/random/600x400/?group,people" alt="Club Event" class="gallery-image">
+                    <div class="gallery-info">
+                        <h3 class="font-semibold text-lg mb-2">Fall Meetup</h3>
+                        <p class="text-gray-600 text-sm">By: Club Member</p>
+                    </div>
+                </div>
+                
+                <!-- Nature -->
+                <div class="gallery-item" data-category="nature">
+                    <img src="https://source.unsplash.com/random/600x400/?forest" alt="Nature Photography" class="gallery-image">
+                    <div class="gallery-info">
+                        <h3 class="font-semibold text-lg mb-2">Autumn Forest</h3>
+                        <p class="text-gray-600 text-sm">By: Robert Wilson</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <!-- Same footer as index.html -->
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <!-- Footer content -->
     </footer>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="image-modal">
+        <div class="image-modal-content">
+            <button id="modal-close" class="modal-close">&times;</button>
+            <img id="modal-image" src="" alt="" class="modal-image">
+            <div class="bg-white p-4">
+                <h3 id="modal-title" class="text-xl font-bold"></h3>
+                <p id="modal-author" class="text-gray-600"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascripts/gallery.js"></script>
 </body>
 </html>

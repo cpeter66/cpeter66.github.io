@@ -1,0 +1,82 @@
+/* Tailwind base, components, and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom colors */
+@layer components {
+    .bg-uncc-green {
+        background-color: #00703C;
+    }
+    .bg-uncc-gold {
+        background-color: #B3A369;
+    }
+    .text-uncc-green {
+        color: #00703C;
+    }
+    .text-uncc-gold {
+        color: #B3A369;
+    }
+    .border-uncc-green {
+        border-color: #00703C;
+    }
+    .border-uncc-gold {
+        border-color: #B3A369;
+    }
+    .ring-uncc-green {
+        --tw-ring-color: #00703C;
+    }
+    .ring-uncc-gold {
+        --tw-ring-color: #B3A369;
+    }
+}
+
+/* Base styles */
+body {
+    @apply antialiased text-gray-800;
+}
+
+/* Global classes */
+.hero-gradient {
+    background: linear-gradient(135deg, #00703C 0%, #00552e 100%);
+}
+
+.nav-link {
+    @apply transition duration-300;
+}
+.nav-link:hover {
+    @apply text-uncc-gold;
+}
+
+/* Transitions */
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+/* Modal styles */
+.modal-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.modal-content {
+    @apply bg-white rounded-lg shadow-xl max-w-md w-full p-6;
+}
+
+/* Form styles */
+.input-field {
+    @apply mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 
+           focus:outline-none focus:ring-uncc-green focus:border-uncc-green;
+}
+
+.btn-primary {
+    @apply bg-uncc-green hover:bg-green-800 text-white font-bold py-2 px-4 rounded transition duration-300;
+}
+
+.btn-secondary {
+    @apply bg-uncc-gold hover:bg-yellow-700 text-black font-bold py-2 px-4 rounded transition duration-300;
+}
+
+/* Utility classes */
+.section-title {
+    @apply text-3xl font-bold text-black mb-8 text-center border-b-2 border-uncc-gold pb-2 inline-block;
+}

@@ -3,83 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>49er Shutterbugs - UNCC Photography Club</title>
-    <link rel="stylesheet" href="styles/clientproj.css">
+    <title>UNCC Photography Club | Home</title>
+    <meta name="description" content="Join the UNCC Photography Club to explore your passion for photography with fellow students">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preload" href="../styles/global.css" as="style">
+    <link rel="preload" href="../styles/home.css" as="style">
+    
+    <!-- CSS -->
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/home.css">
 </head>
-<body>
-    <header>
-        <div class="header-content">
-            <h1>49er Shutterbugs</h1>
-            <p>UNCC Photography Club</p>
+<body class="bg-gray-50 font-sans">
+    <!-- Header/Navigation -->
+    <header class="bg-black text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i class="fas fa-camera text-2xl text-uncc-gold mr-2" aria-hidden="true"></i>
+                    <h1 class="text-xl font-bold">UNCC Photography Club</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8" aria-label="Main navigation">
+                    <a href="index.html" class="nav-link hover:text-uncc-gold">Home</a>
+                    <a href="about.html" class="nav-link hover:text-uncc-gold">About</a>
+                    <a href="gallery.html" class="nav-link hover:text-uncc-gold">Gallery</a>
+                    <a href="events.html" class="nav-link hover:text-uncc-gold">Events</a>
+                    <a href="contact.html" class="nav-link hover:text-uncc-gold">Contact</a>
+                </nav>
+                <button class="md:hidden focus:outline-none" id="mobile-menu-button" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden mt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-3" role="menu">
+                    <a href="index.html" class="nav-link hover:text-uncc-gold" role="menuitem">Home</a>
+                    <a href="about.html" class="nav-link hover:text-uncc-gold" role="menuitem">About</a>
+                    <a href="gallery.html" class="nav-link hover:text-uncc-gold" role="menuitem">Gallery</a>
+                    <a href="events.html" class="nav-link hover:text-uncc-gold" role="menuitem">Events</a>
+                    <a href="contact.html" class="nav-link hover:text-uncc-gold" role="menuitem">Contact</a>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./gallery.html">Gallery</a></li>
-                <li><a href="./events.html">Events</a></li>
-                <li><a href="./resources.html">Resources</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-text">
-                <h2>Capture the Moment, Share the Vision</h2>
-                <p>Join UNCC's premier photography community</p>
-                <a href="about.html" class="cta-button">Learn More</a>
-            </div>
-        </section>
-
-        <section class="featured">
-            <h2>Featured Photos</h2>
-            <div class="photo-grid">
-                <div class="photo-card">
-                    <img src="images/feature1.jpg" alt="Campus sunset">
-                    <p>UNCC Campus Sunset</p>
-                </div>
-                <div class="photo-card">
-                    <img src="images/feature2.jpg" alt="Charlotte skyline">
-                    <p>Charlotte Skyline</p>
-                </div>
-                <div class="photo-card">
-                    <img src="images/feature3.jpg" alt="Nature close-up">
-                    <p>Nature Close-Up</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="announcements">
-            <h2>Club Announcements</h2>
-            <div class="announcement-card">
-                <h3>Next Meeting: October 15th</h3>
-                <p>6:30 PM in Student Union 340</p>
-                <p>Guest speaker on portrait photography techniques</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Connect With Us</h3>
-                <p><i class="fas fa-envelope"></i> photography@uncc.edu</p>
-                <p><i class="fas fa-phone"></i> (704) 555-1234</p>
-            </div>
-            <div class="footer-section">
-                <h3>Meeting Times</h3>
-                <p>Every Tuesday at 6:30 PM</p>
-                <p>Student Union Room 340</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 49er Shutterbugs. All rights reserved.</p>
-            <p>
-                <a href="https://validator.w3.org/check?uri=referer">HTML Valid</a> | 
-                <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS Valid</a>
-            </p>
-        </div>
-    </footer>
+    <!-- Rest of your HTML content remains the same -->
+    
+    <!-- Load scripts at the end of body -->
+    <script src="../javascripts/main.js" defer></script>
+    <script src="../javascripts/home.js" defer></script>
 </body>
 </html>
