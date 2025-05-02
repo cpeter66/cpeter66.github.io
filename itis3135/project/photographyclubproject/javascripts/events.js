@@ -11,18 +11,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const openModal = (eventTitle) => {
             eventModalTitle.textContent = `RSVP: ${eventTitle}`;
-            rsvpModal.classList.add('active');
+            rsvpModal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
         };
 
         const closeModal = () => {
-            rsvpModal.classList.remove('active');
+            rsvpModal.style.display = 'none';
             document.body.style.overflow = '';
         };
 
         // Set up event listeners for RSVP buttons
         rsvpButtons.forEach(button => {
-            button.addEventListener('click', () => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
                 const eventCard = button.closest('.event-card');
                 const eventTitle = eventCard.querySelector('.event-title').textContent;
                 openModal(eventTitle);
@@ -31,15 +32,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Close modal handlers
         if (closeRsvpModal) {
-            closeRsvpModal.addEventListener('click', closeModal);
+            closeRsvpModal.addEventListener('click', (e) => {
+                e.preventDefault();
+                closeModal();
+            });
         }
 
         // Form submission
         if (rsvpForm) {
             rsvpForm.addEventListener('submit', (e) => {
                 e.preventDefault();
+                // Form validation
+                const name = document.getElementById('rsvp-name').value;
+                const email = document.getElementById('rsvp-email').value;
+                
+                if (!name || !email) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+
                 // In a real app, you would send form data here
-                alert('Thank you for your RSVP! We look forward to seeing you at the event.');
+                alert(`Thank you for your RSVP, ${name}! We've sent a confirmation to ${email}.`);
                 closeModal();
                 rsvpForm.reset();
             });
@@ -54,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Close with Escape key
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && rsvpModal.classList.contains('active')) {
+            if (e.key === 'Escape' && rsvpModal.style.display === 'flex') {
                 closeModal();
             }
         });
@@ -69,13 +82,13 @@ document.addEventListener('DOMContentLoaded', function() {
             
             card.addEventListener('mouseenter', () => {
                 if (dateBadge) {
-                    dateBadge.style.backgroundColor = '#B3A369';
+                    dateBadge.style.backgroundColor = '#B3A369'; // UNCC gold
                 }
             });
             
             card.addEventListener('mouseleave', () => {
                 if (dateBadge) {
-                    dateBadge.style.backgroundColor = '#00703C';
+                    dateBadge.style.backgroundColor = '#00703C'; // UNCC green
                 }
             });
         });
