@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNCC Photography Club | Contact</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles/globalstyles.css">
     <link rel="stylesheet" href="./styles/contact.css">
 </head>
 <body class="bg-gray-50 font-sans">
@@ -17,7 +18,7 @@
                     <h1 class="text-xl font-bold">UNCC Photography Club</h1>
                 </div>
                 <nav class="hidden md:flex space-x-8">
-                    <a href="index.html" class="nav-link hover:text-uncc-gold">Home</a>
+                    <a href="../index.html" class="nav-link hover:text-uncc-gold">Home</a>
                     <a href="about.html" class="nav-link hover:text-uncc-gold">About</a>
                     <a href="gallery.html" class="nav-link hover:text-uncc-gold">Gallery</a>
                     <a href="events.html" class="nav-link hover:text-uncc-gold">Events</a>
@@ -30,7 +31,7 @@
             <!-- Mobile menu -->
             <div class="md:hidden hidden mt-4" id="mobile-menu">
                 <div class="flex flex-col space-y-3">
-                    <a href="index.html" class="nav-link hover:text-uncc-gold">Home</a>
+                    <a href="../index.html" class="nav-link hover:text-uncc-gold">Home</a>
                     <a href="about.html" class="nav-link hover:text-uncc-gold">About</a>
                     <a href="gallery.html" class="nav-link hover:text-uncc-gold">Gallery</a>
                     <a href="events.html" class="nav-link hover:text-uncc-gold">Events</a>
@@ -46,6 +47,7 @@
         <section class="mb-16">
             <h2 class="text-3xl font-bold text-black mb-8 text-center border-b-2 border-uncc-gold pb-2 inline-block">Contact Us</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Left column with contact info -->
                 <div>
                     <h3 class="text-2xl font-semibold text-uncc-green mb-4">Get In Touch</h3>
                     <p class="text-gray-700 mb-6">Have questions about the club or want to get involved? Reach out to us using the form or contact information below.</p>
@@ -85,16 +87,17 @@
                     </div>
                 </div>
 
+                <!-- Right column with contact form -->
                 <div class="contact-form">
                     <h3 class="text-2xl font-semibold text-uncc-green mb-4">Send Us a Message</h3>
                     <form id="contact-form" class="space-y-4">
                         <div>
                             <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" class="input-field">
+                            <input type="text" id="name" name="name" class="input-field" required>
                         </div>
                         <div>
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="input-field">
+                            <input type="email" id="email" name="email" class="input-field" required>
                         </div>
                         <div>
                             <label for="subject">Subject</label>
@@ -107,7 +110,7 @@
                         </div>
                         <div>
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4" class="input-field"></textarea>
+                            <textarea id="message" name="message" rows="4" class="input-field" required></textarea>
                         </div>
                         <div>
                             <button type="submit" class="btn-primary">Send Message</button>
@@ -186,7 +189,7 @@
         </div>
     </footer>
 
-    <!-- Contact Success Modal -->
+    <!-- Contact Success Modal - Initially hidden -->
     <div id="contact-success-modal" class="success-modal hidden">
         <div class="success-modal-content">
             <div class="success-icon">

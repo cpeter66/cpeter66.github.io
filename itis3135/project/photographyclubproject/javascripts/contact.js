@@ -8,11 +8,18 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Show success modal
-            successModal.classList.remove('hidden');
+            // Validate form
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
             
-            // Reset form
-            this.reset();
+            if (name && email && message) {
+                // Only show success modal if form is valid
+                successModal.classList.remove('hidden');
+                
+                // Reset form
+                this.reset();
+            }
         });
     }
 
