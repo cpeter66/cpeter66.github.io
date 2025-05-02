@@ -9,101 +9,96 @@
     <link rel="stylesheet" href="./styles/about.css">
     <link rel="stylesheet" href="./styles/globalstyles.css">
 </head>
-<body class="bg-gray-50 font-sans">
+<body class="font-sans">
     <!-- Header/Navigation -->
-    <header class="bg-black text-white shadow-lg">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <i class="fas fa-camera text-2xl text-uncc-gold mr-2"></i>
-                    <h1 class="text-xl font-bold">UNCC Photography Club</h1>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-camera logo-icon" aria-hidden="true"></i>
+                    <h1>UNCC Photography Club</h1>
                 </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="../photographyclubproject/index.html" class="nav-link hover:text-uncc-gold">Home</a>
-                    <a href="about.html" class="nav-link font-medium text-uncc-gold">About</a>
-                    <a href="gallery.html" class="nav-link hover:text-uncc-gold">Gallery</a>
-                    <a href="events.html" class="nav-link hover:text-uncc-gold">Events</a>
-                    <a href="contact.html" class="nav-link hover:text-uncc-gold">Contact</a>
+                <nav class="main-nav" aria-label="Main navigation">
+                    <a href="../photographyclubproject/" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link current">About</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="events.html" class="nav-link">Events</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
                 </nav>
-                <button class="md:hidden focus:outline-none" id="mobile-menu-button">
-                    <i class="fas fa-bars text-2xl"></i>
+                <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
                 </button>
-            </div>
-            <!-- Mobile menu -->
-            <div class="md:hidden hidden mt-4" id="mobile-menu">
-                <div class="flex flex-col space-y-3">
-                    <a href="index.html" class="nav-link hover:text-uncc-gold">Home</a>
-                    <a href="about.html" class="nav-link font-medium text-uncc-gold">About</a>
-                    <a href="gallery.html" class="nav-link hover:text-uncc-gold">Gallery</a>
-                    <a href="events.html" class="nav-link hover:text-uncc-gold">Events</a>
-                    <a href="contact.html" class="nav-link hover:text-uncc-gold">Contact</a>
-                </div>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-6 py-12">
+    <main>
         <!-- About Section -->
-        <section class="mb-16">
-            <h2 class="text-3xl font-bold text-black mb-8 text-center border-b-2 border-uncc-gold pb-2 inline-block">About Our Club</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <section class="about-section">
+            <div class="container">
+                <h2 class="section-title">About Our Club</h2>
                 <div class="about-content">
-                    <h3 class="text-2xl font-semibold text-uncc-green mb-4">Who We Are</h3>
-                    <p class="text-gray-700 mb-4">The UNCC Photography Club is a student-run organization dedicated to fostering creativity and passion for photography among students of all skill levels.</p>
-                    <p class="text-gray-700 mb-6">Founded in 2010, we've grown to become one of the most active arts organizations on campus, with over 150 members.</p>
-                    
-                    <h3 class="text-2xl font-semibold text-uncc-green mb-4">Our Mission</h3>
-                    <p class="text-gray-700 mb-4">To provide a supportive community where students can learn, practice, and share their love for photography through workshops, photo walks, exhibitions, and collaborative projects.</p>
-                </div>
-                <div class="rounded-lg overflow-hidden shadow-lg">
-                    <img src="../images/club-members.jpg" alt="Club Members" class="w-full h-auto">
+                    <div class="about-text">
+                        <h3>Who We Are</h3>
+                        <p>The UNCC Photography Club is a student-run organization dedicated to fostering creativity and passion for photography among students of all skill levels.</p>
+                        <p>Founded in 2010, we've grown to become one of the most active arts organizations on campus, with over 150 members.</p>
+                        
+                        <h3>Our Mission</h3>
+                        <p>To provide a supportive community where students can learn, practice, and share their love for photography through workshops, photo walks, exhibitions, and collaborative projects.</p>
+                    </div>
+                    <div class="about-image-container">
+                        <img src="../images/club-members.jpg" alt="Club Members" class="about-image">
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Leadership Team -->
-        <section class="mb-16">
-            <h2 class="text-3xl font-bold text-black mb-8 text-center border-b-2 border-uncc-gold pb-2 inline-block">Leadership Team</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                <div class="leader-card">
-                    <img src="../images/president.jpg" alt="President" class="leader-image">
-                    <h3 class="text-xl font-bold text-uncc-green">Sarah Johnson</h3>
-                    <p class="text-uncc-gold font-medium mb-2">President</p>
-                    <p class="text-gray-600 text-sm">Senior, Communications Major</p>
-                </div>
-                <div class="leader-card">
-                    <img src="../images/vice-president.jpg" alt="Vice President" class="leader-image">
-                    <h3 class="text-xl font-bold text-uncc-green">Michael Chen</h3>
-                    <p class="text-uncc-gold font-medium mb-2">Vice President</p>
-                    <p class="text-gray-600 text-sm">Junior, Computer Science Major</p>
-                </div>
-                <div class="leader-card">
-                    <img src="../images/treasurer.jpg" alt="Treasurer" class="leader-image">
-                    <h3 class="text-xl font-bold text-uncc-green">Emily Rodriguez</h3>
-                    <p class="text-uncc-gold font-medium mb-2">Treasurer</p>
-                    <p class="text-gray-600 text-sm">Junior, Business Major</p>
+        <section class="team-section">
+            <div class="container">
+                <h2 class="section-title">Leadership Team</h2>
+                <div class="team-grid">
+                    <div class="leader-card">
+                        <img src="../images/president.jpg" alt="President" class="leader-image">
+                        <h3 class="leader-name">Sarah Johnson</h3>
+                        <p class="leader-role">President</p>
+                        <p class="leader-bio">Senior, Communications Major</p>
+                    </div>
+                    <div class="leader-card">
+                        <img src="../images/vice-president.jpg" alt="Vice President" class="leader-image">
+                        <h3 class="leader-name">Michael Chen</h3>
+                        <p class="leader-role">Vice President</p>
+                        <p class="leader-bio">Junior, Computer Science Major</p>
+                    </div>
+                    <div class="leader-card">
+                        <img src="../images/treasurer.jpg" alt="Treasurer" class="leader-image">
+                        <h3 class="leader-name">Emily Rodriguez</h3>
+                        <p class="leader-role">Treasurer</p>
+                        <p class="leader-bio">Junior, Business Major</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Join Us CTA -->
-        <section class="text-center bg-white p-8 rounded-lg shadow-lg">
-            <h2 class="text-3xl font-bold text-black mb-4">Ready to Join Us?</h2>
-            <p class="text-gray-700 mb-6 max-w-2xl mx-auto">Whether you're a beginner or an experienced photographer, we welcome all UNCC students to join our community of photography enthusiasts.</p>
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="contact.html" class="bg-uncc-green hover:bg-green-800 text-white font-bold py-3 px-8 rounded transition duration-300">Contact Us</a>
-                <button id="signup-btn" class="bg-black hover:bg-gray-800 text-white font-bold py-3 px-8 rounded transition duration-300">Sign Up Now</button>
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Join Us?</h2>
+                <p>Whether you're a beginner or an experienced photographer, we welcome all UNCC students to join our community of photography enthusiasts.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="cta-btn cta-btn-primary">Contact Us</a>
+                    <button id="signup-btn" class="cta-btn cta-btn-secondary">Sign Up Now</button>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-black text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="text-center">
-                <p>&copy; 2023 UNCC Photography Club. All rights reserved.</p>
-            </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 UNCC Photography Club. All rights reserved.</p>
+            <p class="copyright">Capturing UNCC's moments since 2010</p>
         </div>
     </footer>
 
