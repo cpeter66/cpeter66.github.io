@@ -1,173 +1,84 @@
-/* Hero Section */
-.hero {
-    background-color: var(--uncc-green);
-    color: white;
-    padding: 5rem 0;
-    text-align: center;
+/* Featured Photos */
+.card-hover {
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-.hero p {
-    font-size: 1.25rem;
-    max-width: 800px;
-    margin: 0 auto 2rem;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* Gallery Preview */
-.gallery-preview {
-    background-color: var(--bg-white);
-    padding: 4rem 0;
-}
-
-.gallery-preview .section-title {
-    margin-bottom: 2rem;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
+/* Gallery items */
 .gallery-item {
-    background-color: var(--bg-white);
-    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
 }
 
 .gallery-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    transform: scale(1.03);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
-.gallery-item-info {
-    padding: 1.5rem;
+.gallery-item:hover img {
+    transform: scale(1.05);
 }
 
-/* Events Preview */
-.events-preview {
-    background-color: var(--bg-light);
-    padding: 4rem 0;
-}
-
-.events-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
+/* Event cards */
 .event-card {
-    display: flex;
-    gap: 1.5rem;
-    align-items: flex-start;
-    background-color: var(--bg-white);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.event-date {
-    background-color: var(--uncc-green);
+.event-card:hover .event-date {
+    background-color: #B3A369;
     color: white;
-    padding: 1rem;
-    border-radius: 0.5rem;
+}
+
+/* Countdown timer */
+.countdown-item {
+    background-color: #00703C;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
     text-align: center;
-    min-width: 80px;
+    min-width: 60px;
 }
 
-.event-date-day {
-    font-size: 1.75rem;
-    font-weight: bold;
+.countdown-number {
     display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.event-date-month {
-    font-size: 0.875rem;
+.countdown-label {
+    font-size: 0.75rem;
     text-transform: uppercase;
 }
 
-.event-info {
-    flex: 1;
-}
-
-/* Testimonials */
-.testimonials {
-    padding: 4rem 0;
-    background-color: var(--bg-white);
-}
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.testimonial-card {
-    background-color: var(--bg-light);
-    padding: 1.5rem;
+/* About preview section */
+.about-preview {
+    background-color: black;
+    color: white;
     border-radius: 0.5rem;
-    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-.member-info {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.member-info img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* CTA Section */
-.cta {
-    background-color: var(--uncc-gold);
-    color: var(--text-dark);
-    padding: 4rem 0;
-    text-align: center;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-@media (max-width: 768px) {
-    .hero-buttons,
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Hero section */
+.hero-gradient {
+    background: linear-gradient(135deg, #00703C 0%, #00552e 100%);
+    position: relative;
+    overflow: hidden;
 }
