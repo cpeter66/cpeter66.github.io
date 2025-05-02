@@ -6,54 +6,162 @@
     <title>UNCC Photography Club | Home</title>
     <meta name="description" content="Join the UNCC Photography Club to explore your passion for photography with fellow students">
     
-    <!-- Preload critical resources -->
-    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
-    <link rel="preload" href="../styles/global.css" as="style">
-    <link rel="preload" href="../styles/home.css" as="style">
-    
     <!-- CSS -->
-    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../styles/global.css">
-    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="./styles/globalstyles.css">
+    <link rel="stylesheet" href="./styles/homepagestyles.css">
 </head>
-<body class="bg-gray-50 font-sans">
-    <!-- Header/Navigation -->
-    <header class="bg-black text-white shadow-lg">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <i class="fas fa-camera text-2xl text-uncc-gold mr-2" aria-hidden="true"></i>
-                    <h1 class="text-xl font-bold">UNCC Photography Club</h1>
+<body class="bg-gray-50">
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-camera logo-icon" aria-hidden="true"></i>
+                    <h1>UNCC Photography Club</h1>
                 </div>
-                <nav class="hidden md:flex space-x-8" aria-label="Main navigation">
-                    <a href="index.html" class="nav-link hover:text-uncc-gold">Home</a>
-                    <a href="about.html" class="nav-link hover:text-uncc-gold">About</a>
-                    <a href="gallery.html" class="nav-link hover:text-uncc-gold">Gallery</a>
-                    <a href="events.html" class="nav-link hover:text-uncc-gold">Events</a>
-                    <a href="contact.html" class="nav-link hover:text-uncc-gold">Contact</a>
+                <nav class="main-nav" aria-label="Main navigation">
+                    <a href="index.html" class="nav-link current">Home</a>
+                    <a href="./about.html" class="nav-link">About</a>
+                    <a href="./gallery.html" class="nav-link">Gallery</a>
+                    <a href="./events.html" class="nav-link">Events</a>
+                    <a href="./contact.html" class="nav-link">Contact</a>
                 </nav>
-                <button class="md:hidden focus:outline-none" id="mobile-menu-button" aria-label="Toggle menu" aria-expanded="false">
-                    <i class="fas fa-bars text-2xl"></i>
+                <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
                 </button>
-            </div>
-            <!-- Mobile menu -->
-            <div class="md:hidden hidden mt-4" id="mobile-menu">
-                <div class="flex flex-col space-y-3" role="menu">
-                    <a href="index.html" class="nav-link hover:text-uncc-gold" role="menuitem">Home</a>
-                    <a href="about.html" class="nav-link hover:text-uncc-gold" role="menuitem">About</a>
-                    <a href="gallery.html" class="nav-link hover:text-uncc-gold" role="menuitem">Gallery</a>
-                    <a href="events.html" class="nav-link hover:text-uncc-gold" role="menuitem">Events</a>
-                    <a href="contact.html" class="nav-link hover:text-uncc-gold" role="menuitem">Contact</a>
-                </div>
             </div>
         </div>
     </header>
 
-    <!-- Rest of your HTML content remains the same -->
-    
-    <!-- Load scripts at the end of body -->
-    <script src="../javascripts/main.js" defer></script>
-    <script src="../javascripts/home.js" defer></script>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Capture Your UNCC Experience</h2>
+            <p>Join Charlotte's premier student photography community. Learn, create, and share your vision.</p>
+            <div class="hero-buttons">
+                <a href="photographyclubproject/about.html" class="btn btn-primary">Learn More</a>
+                <a href="photographyclubproject/contact.html" class="btn btn-outline">Join Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Gallery Preview -->
+    <section class="gallery-preview">
+        <div class="container">
+            <h2>Featured Shots</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/random/600x400/?campus" alt="UNCC Campus">
+                    <h3>Autumn at UNCC</h3>
+                    <p>By: Sarah Johnson</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/random/600x400/?student" alt="Student Life">
+                    <h3>Campus Life</h3>
+                    <p>By: Michael Chen</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/random/600x400/?architecture" alt="Campus Architecture">
+                    <h3>Modern Lines</h3>
+                    <p>By: Emma Rodriguez</p>
+                </div>
+            </div>
+            <a href="photographyclubproject/gallery.html" class="btn btn-primary">View Full Gallery</a>
+        </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="events">
+        <div class="container">
+            <h2>Upcoming Events</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">OCT</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Photo Walk: Fall Colors</h3>
+                        <p class="event-time"><i class="fas fa-clock"></i>3:00 PM - 5:00 PM</p>
+                        <p class="event-desc">Explore UNCC's campus during peak fall foliage.</p>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">22</span>
+                        <span class="month">OCT</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Portrait Workshop</h3>
+                        <p class="event-time"><i class="fas fa-clock"></i>2:00 PM - 4:00 PM</p>
+                        <p class="event-desc">Learn lighting techniques from professionals.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="photographyclubproject/events.html" class="btn btn-primary">All Events</a>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Members Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="member-info">
+                        <img src="https://source.unsplash.com/random/100x100/?portrait,student" alt="Member">
+                        <div>
+                            <h4>Alex Morgan</h4>
+                            <p>Computer Science '24</p>
+                        </div>
+                    </div>
+                    <p>"The club helped me go from smartphone snapshots to published work!"</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="member-info">
+                        <img src="https://source.unsplash.com/random/100x100/?portrait,woman" alt="Member">
+                        <div>
+                            <h4>Priya Patel</h4>
+                            <p>Architecture '25</p>
+                        </div>
+                    </div>
+                    <p>"I've made lifelong friends while improving my photography skills."</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="member-info">
+                        <img src="https://source.unsplash.com/random/100x100/?portrait,man" alt="Member">
+                        <div>
+                            <h4>Tyler James</h4>
+                            <p>Business '23</p>
+                        </div>
+                    </div>
+                    <p>"The workshops helped me build a portfolio for my marketing internship."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Join?</h2>
+            <p>No experience necessary - just bring your enthusiasm for photography!</p>
+            <div class="cta-buttons">
+                <a href="photographyclubproject/contact.html" class="btn btn-primary">Contact Us</a>
+                <a href="https://ninerengage.uncc.edu/organization/photography" class="btn btn-outline">NinerEngage Page</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>UNCC Photography Club</p>
+            <p class="copyright">© 2023 All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="javascripts/main.js" defer></script>
+    <script src="javascripts/home.js" defer></script>
 </body>
 </html>
