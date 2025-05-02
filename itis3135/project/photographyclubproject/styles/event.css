@@ -1,22 +1,67 @@
-/* Events Section - White background */
+/* Events Page */
 .events-section {
     background-color: var(--bg-white);
 }
 
-/* Event Cards - Green and gold accents */
 .event-card {
-    border: 1px solid rgba(179, 163, 105, 0.3);
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1.5rem;
 }
 
 .event-date {
-    background-color: var(--uncc-green);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.event-date-day {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.event-date-month {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.event-content {
+    padding: 1rem 1rem 1rem 0;
+}
+
+.event-title {
+    color: var(--uncc-green);
+    margin-bottom: 0.5rem;
 }
 
 .rsvp-btn {
-    background-color: var(--uncc-gold);
+    padding: 0.5rem 1.5rem;
 }
 
-/* Past Events - Light background */
+/* Past Events */
 .past-events {
     background-color: var(--bg-light);
+}
+
+.past-event-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.past-event-image {
+    height: 200px;
+    object-fit: cover;
+}
+
+.past-event-content {
+    padding: 1.5rem;
+}
+
+.past-event-title {
+    color: var(--uncc-green);
 }

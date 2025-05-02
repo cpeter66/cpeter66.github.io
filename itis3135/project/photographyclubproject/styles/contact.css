@@ -1,23 +1,96 @@
-/* Contact Section - White background */
+/* Contact Page */
 .contact-section {
     background-color: var(--bg-white);
 }
 
-/* Contact Info - Gold icons */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contact-info {
+    padding: 2rem;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
 .contact-icon {
+    font-size: 1.25rem;
+    color: var(--uncc-gold);
+    margin-top: 0.25rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: var(--text-medium);
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
     color: var(--uncc-gold);
 }
 
-/* Form - Green focus */
-.form-input:focus {
-    border-color: var(--uncc-green);
+.contact-form {
+    padding: 2rem;
 }
 
-/* FAQ Section - Light background with gold accents */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.375rem;
+}
+
+.form-input:focus {
+    border-color: var(--uncc-green);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 112, 60, 0.1);
+}
+
+/* FAQ Section */
 .faq-section {
     background-color: var(--bg-light);
 }
 
-.faq-toggle i {
-    color: var(--uncc-gold);
+.faq-item {
+    margin-bottom: 1rem;
+}
+
+.faq-toggle {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    background-color: var(--bg-white);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-content {
+    padding: 1rem;
+    background-color: var(--bg-white);
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
 }

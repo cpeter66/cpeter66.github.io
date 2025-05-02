@@ -1,36 +1,73 @@
-/* Hero Section - Green gradient */
+/* Home Page */
 .hero {
     background: linear-gradient(135deg, var(--uncc-green) 0%, #00552e 100%);
     color: white;
+    padding: 8rem 0;
+    text-align: center;
 }
 
-/* Featured Gallery - White cards with green/gold accents */
-.gallery-item {
-    background: var(--bg-white);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
 }
 
-.gallery-item h3 {
+.hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Featured Gallery */
+.gallery-preview {
+    padding: 5rem 0;
+}
+
+/* Events Preview */
+.events-preview {
+    padding: 5rem 0;
+    background-color: var(--bg-light);
+}
+
+/* Testimonials */
+.testimonials-section {
+    padding: 5rem 0;
+}
+
+.testimonial-card {
+    padding: 2rem;
+    text-align: center;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+    font-weight: 600;
     color: var(--uncc-green);
 }
 
-/* Events Section - Gold accents */
-.event-card .event-date {
-    background-color: var(--uncc-green);
-}
-
-.event-time i {
-    color: var(--uncc-gold);
-}
-
-/* Testimonials - Black text on white */
-.testimonial-card {
-    background: var(--bg-white);
-    color: var(--text-dark);
-}
-
-/* CTA Section - Gold background */
-.cta {
+/* CTA Section */
+.cta-section {
+    padding: 5rem 0;
     background-color: var(--uncc-gold);
     color: var(--text-dark);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 5rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 2.25rem;
+    }
 }
