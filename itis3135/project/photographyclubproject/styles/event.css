@@ -65,6 +65,7 @@
 .past-event-title {
     color: var(--uncc-green);
 }
+/* Modal Styles */
 .image-modal {
     position: fixed;
     top: 0;
@@ -76,12 +77,36 @@
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-modal.active {
+    display: flex;
+    opacity: 1;
 }
 
 .modal-content {
     background-color: var(--bg-white);
-    padding: 2rem;
     border-radius: 0.5rem;
-    max-width: 500px;
+    padding: 2rem;
     width: 90%;
+    max-width: 500px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-medium);
+}
+
+.modal-close:hover {
+    color: var(--text-dark);
 }
