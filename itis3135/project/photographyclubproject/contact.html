@@ -8,196 +8,175 @@
     <link rel="stylesheet" href="./styles/globalstyles.css">
     <link rel="stylesheet" href="./styles/contact.css">
 </head>
-<body class="bg-gray-50 font-sans">
+<body>
     <!-- Header/Navigation -->
-    <header class="bg-black text-white shadow-lg">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <i class="fas fa-camera text-2xl text-uncc-gold mr-2"></i>
-                    <h1 class="text-xl font-bold">UNCC Photography Club</h1>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-camera logo-icon" aria-hidden="true"></i>
+                    <h1>UNCC Photography Club</h1>
                 </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="../photographyclubproject/index.html" class="nav-link hover:text-uncc-gold">Home</a>
-                    <a href="about.html" class="nav-link hover:text-uncc-gold">About</a>
-                    <a href="gallery.html" class="nav-link hover:text-uncc-gold">Gallery</a>
-                    <a href="events.html" class="nav-link hover:text-uncc-gold">Events</a>
-                    <a href="contact.html" class="nav-link font-medium text-uncc-gold">Contact</a>
+                <nav class="main-nav" aria-label="Main navigation">
+                    <a href="../photographyclubproject/" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="events.html" class="nav-link">Events</a>
+                    <a href="contact.html" class="nav-link current">Contact</a>
                 </nav>
-                <button class="md:hidden focus:outline-none" id="mobile-menu-button">
-                    <i class="fas fa-bars text-2xl"></i>
+                <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
                 </button>
-            </div>
-            <!-- Mobile menu -->
-            <div class="md:hidden hidden mt-4" id="mobile-menu">
-                <div class="flex flex-col space-y-3">
-                    <a href="../index.html" class="nav-link hover:text-uncc-gold">Home</a>
-                    <a href="about.html" class="nav-link hover:text-uncc-gold">About</a>
-                    <a href="gallery.html" class="nav-link hover:text-uncc-gold">Gallery</a>
-                    <a href="events.html" class="nav-link hover:text-uncc-gold">Events</a>
-                    <a href="contact.html" class="nav-link font-medium text-uncc-gold">Contact</a>
-                </div>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-6 py-12">
+    <main>
         <!-- Contact Section -->
-        <section class="mb-16">
-            <h2 class="text-3xl font-bold text-black mb-8 text-center border-b-2 border-uncc-gold pb-2 inline-block">Contact Us</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Left column with contact info -->
-                <div>
-                    <h3 class="text-2xl font-semibold text-uncc-green mb-4">Get In Touch</h3>
-                    <p class="text-gray-700 mb-6">Have questions about the club or want to get involved? Reach out to us using the form or contact information below.</p>
-                    
-                    <div class="space-y-4 contact-info">
+        <section class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-container">
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <p>Have questions about the club or want to get involved? Reach out to us using the form or contact information below.</p>
+                        
                         <div class="contact-info-item">
                             <i class="fas fa-envelope contact-icon"></i>
                             <div>
-                                <h4 class="font-semibold">Email</h4>
-                                <p class="text-gray-600">photoclub@uncc.edu</p>
+                                <h4>Email</h4>
+                                <p>photoclub@uncc.edu</p>
                             </div>
                         </div>
+                        
                         <div class="contact-info-item">
                             <i class="fas fa-map-marker-alt contact-icon"></i>
                             <div>
-                                <h4 class="font-semibold">Meeting Location</h4>
-                                <p class="text-gray-600">Rowe Arts Building, Room 215<br>University of North Carolina at Charlotte</p>
+                                <h4>Meeting Location</h4>
+                                <p>Rowe Arts Building, Room 215<br>University of North Carolina at Charlotte</p>
                             </div>
                         </div>
+                        
                         <div class="contact-info-item">
                             <i class="fas fa-clock contact-icon"></i>
                             <div>
-                                <h4 class="font-semibold">Meeting Times</h4>
-                                <p class="text-gray-600">Every Wednesday, 6:00 PM - 7:30 PM</p>
+                                <h4>Meeting Times</h4>
+                                <p>Every Wednesday, 6:00 PM - 7:30 PM</p>
                             </div>
                         </div>
+                        
                     </div>
 
-                    <div class="mt-8">
-                        <h4 class="font-semibold mb-2">Follow Us</h4>
-                        <div class="flex space-x-4 social-icons">
-                            <a href="#" class="text-gray-600 hover:text-uncc-gold text-2xl"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="text-gray-600 hover:text-uncc-gold text-2xl"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="text-gray-600 hover:text-uncc-gold text-2xl"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="text-gray-600 hover:text-uncc-gold text-2xl"><i class="fab fa-flickr"></i></a>
-                        </div>
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <h3>Send Us a Message</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <select id="subject" name="subject" class="form-input">
+                                    <option value="general">General Inquiry</option>
+                                    <option value="membership">Membership Question</option>
+                                    <option value="event">Event Question</option>
+                                    <option value="feedback">Feedback/Suggestion</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" name="message" rows="4" class="form-input" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
                     </div>
-                </div>
-
-                <!-- Right column with contact form -->
-                <div class="contact-form">
-                    <h3 class="text-2xl font-semibold text-uncc-green mb-4">Send Us a Message</h3>
-                    <form id="contact-form" class="space-y-4">
-                        <div>
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" class="input-field" required>
-                        </div>
-                        <div>
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="input-field" required>
-                        </div>
-                        <div>
-                            <label for="subject">Subject</label>
-                            <select id="subject" name="subject" class="input-field">
-                                <option value="general">General Inquiry</option>
-                                <option value="membership">Membership Question</option>
-                                <option value="event">Event Question</option>
-                                <option value="feedback">Feedback/Suggestion</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4" class="input-field" required></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="btn-primary">Send Message</button>
-                        </div>
-                    </form>
                 </div>
             </div>
         </section>
 
         <!-- Map Section -->
-        <section class="mb-16">
-            <h3 class="text-2xl font-semibold text-uncc-green mb-4">Find Us on Campus</h3>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.112451264167!2d-80.734847684752!3d35.30722498029864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88541c1c220cc5f1%3A0x8e1f3b7b7b7b7b7b!2sRowe%20Arts%20Building%2C%20University%20of%20North%20Carolina%20at%20Charlotte!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" class="map-iframe" allowfullscreen="" loading="lazy"></iframe>
+        <section class="map-container">
+            <div class="container">
+                <h3>Find Us on Campus</h3>
+                <div class="map-iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.112451264167!2d-80.734847684752!3d35.30722498029864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88541c1c220cc5f1%3A0x8e1f3b7b7b7b7b7b!2sRowe%20Arts%20Building%2C%20University%20of%20North%20Carolina%20at%20Charlotte!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" class="map-iframe" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
         </section>
 
         <!-- FAQ Section -->
-        <section>
-            <h3 class="text-2xl font-semibold text-uncc-green mb-4">Frequently Asked Questions</h3>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-toggle">
-                        <div class="faq-header">
+        <section class="faq-section">
+            <div class="container">
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-toggle">
                             <h4>Do I need to own a camera to join the club?</h4>
                             <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content">
+                            <p>No! While many members do own cameras, we welcome everyone interested in photography. We have some club cameras available for use during events, and smartphone photography is also encouraged.</p>
                         </div>
-                    </button>
-                    <div class="faq-content">
-                        <p>No! While many members do own cameras, we welcome everyone interested in photography. We have some club cameras available for use during events, and smartphone photography is also encouraged.</p>
                     </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-toggle">
-                        <div class="faq-header">
+                    
+                    <div class="faq-item">
+                        <button class="faq-toggle">
                             <h4>How much does it cost to join?</h4>
                             <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content">
+                            <p>Club membership is free for all UNCC students. Some special events or workshops may have small fees to cover materials or guest speakers, but most of our activities are completely free.</p>
                         </div>
-                    </button>
-                    <div class="faq-content">
-                        <p>Club membership is free for all UNCC students. Some special events or workshops may have small fees to cover materials or guest speakers, but most of our activities are completely free.</p>
                     </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-toggle">
-                        <div class="faq-header">
+                    
+                    <div class="faq-item">
+                        <button class="faq-toggle">
                             <h4>When and where does the club meet?</h4>
                             <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content">
+                            <p>We meet every Wednesday from 6:00 PM to 7:30 PM in Rowe Arts Building, Room 215. Additional photo walks and events are scheduled throughout the semester.</p>
                         </div>
-                    </button>
-                    <div class="faq-content">
-                        <p>We meet every Wednesday from 6:00 PM to 7:30 PM in Rowe Arts Building, Room 215. Additional photo walks and events are scheduled throughout the semester.</p>
                     </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-toggle">
-                        <div class="faq-header">
+                    
+                    <div class="faq-item">
+                        <button class="faq-toggle">
                             <h4>Can I participate if I'm a complete beginner?</h4>
                             <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content">
+                            <p>Absolutely! We welcome photographers of all skill levels. Many of our workshops are designed specifically for beginners, and our more experienced members are always happy to help newcomers.</p>
                         </div>
-                    </button>
-                    <div class="faq-content">
-                        <p>Absolutely! We welcome photographers of all skill levels. Many of our workshops are designed specifically for beginners, and our more experienced members are always happy to help newcomers.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-black text-white py-12">
-        <div class="container mx-auto px-6 text-center">
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
             <p>&copy; 2023 UNCC Photography Club. All rights reserved.</p>
+            <p class="copyright">Capturing UNCC's moments since 2010</p>
         </div>
     </footer>
 
-    <!-- Contact Success Modal - Initially hidden -->
-    <div id="contact-success-modal" class="success-modal hidden">
-        <div class="success-modal-content">
+    <!-- Contact Success Modal -->
+    <div id="contact-success-modal" class="image-modal">
+        <div class="modal-content">
             <div class="success-icon">
                 <i class="fas fa-check-circle"></i>
             </div>
             <h3>Message Sent!</h3>
-            <p class="mb-4">Thank you for contacting us. We'll get back to you as soon as possible.</p>
-            <button id="close-success-modal" class="btn-primary">Close</button>
+            <p>Thank you for contacting us. We'll get back to you as soon as possible.</p>
+            <button id="close-success-modal" class="btn btn-primary">Close</button>
         </div>
     </div>
 
