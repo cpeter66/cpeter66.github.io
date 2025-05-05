@@ -1,46 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ITIS 3135 | Christian Peters | Drawing with p5.js</title>
-  <link rel="stylesheet" href="./styles/globalstyles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNCC Photography Club | Interactive Drawing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles/globalstyles.css">
+    <style>
+        #drawing-container {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        .drawing-instructions {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+            background-color: var(--bg-light);
+            border-radius: 0.5rem;
+        }
+    </style>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header-content">
-        <h1>ITIS 3135 - Christian Peters</h1>
-        <nav class="main-nav">
-          <a href="./index.html" class="nav-link">Home</a>
-          <a href="./about.html" class="nav-link">About</a>
-          <a href="./gallery.html" class="nav-link">Gallery</a>
-          <a href="./events.html" class="nav-link">Events</a>
-          <a href="./contact.html" class="nav-link">Contact</a>
-          <a href="./drawing.html" class="nav-link current">Drawing</a>
-        </nav>
-      </div>
-    </div>
-  </header>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-camera logo-icon" aria-hidden="true"></i>
+                    <h1>UNCC Photography Club</h1>
+                </div>
+                <nav class="main-nav" aria-label="Main navigation">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="events.html" class="nav-link">Events</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="drawing.html" class="nav-link current">Interactive</a>
+                </nav>
+                <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
 
-  <main class="container">
-    <h2>p5.js Drawing Example</h2>
-    <p class="tagline">A creative coding experiment using p5.js</p>
-    <!-- Canvas will be injected by p5.js -->
-  </main>
+    <!-- Main Content -->
+    <main class="container">
+        <h2 class="section-title">Interactive Drawing</h2>
+        <div class="drawing-instructions">
+            <p>Click and drag to draw colorful circles. Press any key to change colors. Press 'c' to clear the canvas.</p>
+        </div>
+        <div id="drawing-container"></div>
+    </main>
 
-  <footer class="footer">
-    <div class="container">
-      <nav class="footer-nav">
-        <a href="https://validator.w3.org/" target="_blank">HTML Validation</a> |
-        <a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS Validation</a>
-      </nav>
-      <p>&copy; Christian Peters | ITIS 3135</p>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 UNCC Photography Club. All rights reserved.</p>
+            <p class="copyright">Capturing UNCC's moments since 2010</p>
+            <p>
+                <a href="https://validator.w3.org/check?uri=referer" target="_blank">HTML Validator</a> |
+                <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">CSS Validator</a>
+            </p>
+        </div>
+    </footer>
 
-  <!-- p5.js and your custom sketch -->
-  <script src="https://cdn.jsdelivr.net/npm/p5@1.8.0/lib/p5.js"></script>
-  <script src="scripts/sketch.js"></script>
+    <!-- p5.js scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.8.0/lib/p5.js"></script>
+    <script src="./scripts/sketch.js"></script>
+    <script src="./javascripts/main.js"></script>
 </body>
 </html>
