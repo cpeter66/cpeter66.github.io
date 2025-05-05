@@ -1,12 +1,31 @@
 /* Events Page */
 .events-section {
     background-color: var(--bg-white);
+    padding: 4rem 0;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .event-card {
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 300px 1fr;
     gap: 1.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    background: white;
+}
+
+.event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
 }
 
 .event-date {
@@ -16,44 +35,68 @@
     align-items: center;
     text-align: center;
     padding: 1rem;
+    background-color: var(--uncc-green);
+    color: white;
 }
 
 .event-date-day {
     font-size: 2rem;
     font-weight: 700;
-    color: white;
 }
 
 .event-date-month {
     font-size: 0.875rem;
     text-transform: uppercase;
-    color: white;
 }
 
 .event-content {
-    padding: 1rem 1rem 1rem 0;
+    padding: 1.5rem;
 }
 
 .event-title {
     color: var(--uncc-green);
     margin-bottom: 0.5rem;
+    font-size: 1.25rem;
 }
 
 .rsvp-btn {
     padding: 0.5rem 1.5rem;
+    background-color: var(--uncc-gold);
+    color: var(--text-dark);
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rsvp-btn:hover {
+    background-color: #d4a017;
 }
 
 /* Past Events */
 .past-events {
     background-color: var(--bg-light);
+    padding: 4rem 0;
+}
+
+.past-events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .past-event-card {
     display: flex;
     flex-direction: column;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    background: white;
 }
 
 .past-event-image {
+    width: 100%;
     height: 200px;
     object-fit: cover;
 }
@@ -64,7 +107,9 @@
 
 .past-event-title {
     color: var(--uncc-green);
+    margin-bottom: 1rem;
 }
+
 /* Modal Styles */
 .image-modal {
     position: fixed;
@@ -109,4 +154,18 @@
 
 .modal-close:hover {
     color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+    .event-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .event-image {
+        height: 150px;
+    }
+    
+    .past-event-image {
+        height: 150px;
+    }
 }
