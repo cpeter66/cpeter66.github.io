@@ -157,4 +157,49 @@
                     <!-- Past Event 3 -->
                     <div class="past-event-card">
                         <img src="./images/gallery/Aerial_Woodward_Campus.jpg" alt="Spring exhibition venue" loading="lazy" width="400" height="200" class="past-event-image">
-                        <div class
+                        <div class="past-event-content">
+                            <h3 class="past-event-title">Spring Exhibition</h3>
+                            <p class="past-event-meta"><i class="fas fa-calendar"></i>May 5, 2023</p>
+                            <p class="past-event-meta"><i class="fas fa-users"></i>150+ Attendees</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 UNCC Photography Club. All rights reserved.</p>
+            <p class="copyright">Capturing UNCC's moments since 2010</p>
+        </div>
+    </footer>
+
+    <!-- Event RSVP Modal -->
+    <div id="rsvp-modal" class="image-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="close-rsvp-modal">&times;</button>
+            <h3 id="event-modal-title">Event RSVP</h3>
+            <form id="rsvp-form" class="form-group">
+                <div class="form-group">
+                    <label for="rsvp-name" class="form-label">Full Name</label>
+                    <input type="text" id="rsvp-name" name="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="rsvp-email" class="form-label">UNCC Email</label>
+                    <input type="email" id="rsvp-email" name="email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="rsvp-guests" class="form-label">Number of Guests</label>
+                    <input type="number" id="rsvp-guests" name="guests" min="0" max="2" class="form-input">
+                </div>
+                <button type="submit" class="btn btn-primary">Confirm RSVP</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./javascripts/main.js"></script>
+    <script src="./javascripts/events.js"></script>
+</body>
+</html>
